@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="VLP-16">
+    <!-- Velodyne -->
+    <link name="velodyne">
+        <visual name="visual">
+            <geometry>
+                <cylinder length="0.07" radius="0.05"/>
+            </geometry>
+        </visual>
+        <inertial>
+            <mass value="0.001"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+        <sensor name='VLP-16' type='gpu_lidar'>"
+            <topic>velodyne_points</topic>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>1800</samples>
+                        <resolution>0.003490659</resolution> <!-- 0.2 degrees -->
+                        <min_angle>-3.14159265</min_angle>
+                        <max_angle>3.14159265</max_angle>
+                    </horizontal>
+                    <vertical>
+                        <samples>16</samples>
+                        <resolution>0.034906585</resolution>
+                        <min_angle>-0.26179938</min_angle>
+                        <max_angle>0.26179939</max_angle>
+                    </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>100.0</max>
+                    <resolution>0.002</resolution>
+                </range>
+            </ray>
+            <always_on>1</always_on>
+            <visualize>true</visualize>
+        </sensor>
+    </link>
+</robot>

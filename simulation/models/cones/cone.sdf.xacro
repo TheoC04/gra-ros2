@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <!-- Macro to define a cone -->
+    <xacro:macro name="cone" params="name type pose">
+        <link name="${name}">
+            <pose>${pose}</pose>
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>file:///home/user/colcon_ws/src/simulation/models/cones/cone_${type}/mesh.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <!-- <mesh>
+                        <uri>file:///home/user/colcon_ws/src/simulation/models/cones/cone_${type}/mesh.dae</uri>
+                    </mesh> -->
+                    <!-- Simpler collision model for performance boost -->
+                    <box>
+                        <size>0.2 0.2 0.5</size>
+                    </box>
+                </geometry>
+            </collision>
+
+            <!-- Different inertial properties for different types of cones -->
+            <inertial>
+                <xacro:if value="${type == 'orange_big'}">
+                    <mass>1.05</mass>
+                    <!-- Edit centre of mass later -->
+                    <inertia>
+                        <ixx>0.003</ixx>
+                        <ixy>0.0</ixy>
+                        <ixz>0.0</ixz>
+                        <iyy>0.003</iyy>
+                        <iyz>0.0</iyz>
+                        <izz>0.002</izz>
+                    </inertia>
+                </xacro:if>
+                <xacro:unless value="${type == 'orange_big'}">
+                    <mass>0.45</mass>
+                    <inertia>
+                        <ixx>0.013</ixx>
+                        <ixy>0.0</ixy>
+                        <ixz>0.0</ixz>
+                        <iyy>0.013</iyy>
+                        <iyz>0.0</iyz>
+                        <izz>0.006</izz>
+                    </inertia>
+                </xacro:unless>
+            </inertial>
+            
+        </link>
+    </xacro:macro>
+</robot>
