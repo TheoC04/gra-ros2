@@ -1,5 +1,5 @@
-# Usage
-This package is for ROS 2 Jazzy. Follow the [installation guide](https://docs.ros.org/en/jazzy/Installation.html) before proceeding with the next steps.
+# Prerequisites
+This package is intended for ROS 2 Jazzy. Follow the [installation guide](https://docs.ros.org/en/jazzy/Installation.html) before proceeding with the next steps.
 
 # Build Instructions
 
