@@ -69,7 +69,6 @@ install(PROGRAMS
 
 install(DIRECTORY
   launch
-  rviz2
   models
   DESTINATION share/${PROJECT_NAME}
 )
