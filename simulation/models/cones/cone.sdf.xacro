@@ -7,14 +7,14 @@
             <visual name="visual">
                 <geometry>
                     <mesh>
-                        <uri>file:///home/user/colcon_ws/src/simulation/models/cones/cone_${type}/mesh.dae</uri>
+                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
                     </mesh>
                 </geometry>
             </visual>
             <collision name="collision">
                 <geometry>
                     <!-- <mesh>
-                        <uri>file:///home/user/colcon_ws/src/simulation/models/cones/cone_${type}/mesh.dae</uri>
+                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
                     </mesh> -->
                     <!-- Simpler collision model for performance boost -->
                     <box>
