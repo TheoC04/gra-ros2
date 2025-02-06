@@ -49,6 +49,12 @@ echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 echo "source ~/colcon_ws/install/setup.bash" >> ~/.bashrc
 ```
 
+Run the following command so Gazebo can find the vehicle mesh
+```
+echo "export GZ_SIM_RESOURCE_PATH=$HOME/colcon_ws/install/simulation/share/" >> ~/.bashrc
+```
+then continue in a new terminal.
+
 To run the simulator, run the following commands
 
 ```
