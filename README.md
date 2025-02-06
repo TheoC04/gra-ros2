@@ -63,9 +63,9 @@ ros2 launch simulation dynamic_event.launch.py autostart:=true
 This should launch Gazebo Sim, with the acceleration track and ADS-DV vehicle model spawned in.
 
 The following launch arguments are provided for this launch file
-  | Argument | Options | Default
---|--|--|
-event | specifies which track to spawn in based on the dynamic event | `acceleration`
-autostart | starts the simulation automatically | `true`
-model_file | path to the vehicle model sdf file | hard-coded path
-name | sets the vehicle name in Gazebo | `ads_dv`
+  | Argument |Description| Options | Default
+--|--|--|--|
+event | specifies which track to spawn in based on the dynamic event |`acceleration`, `skidpad`, `autocross`, `trackdrive` |`acceleration`
+autostart | starts the simulation automatically |`true`, `false`|`true`
+model_file | path to the vehicle model sdf file | Any valid path to vehicle sdf model |hard-coded path
+name | sets the vehicle name in Gazebo | Any valid string|`ads_dv`
