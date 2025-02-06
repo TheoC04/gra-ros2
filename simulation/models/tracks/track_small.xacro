@@ -2,7 +2,7 @@
 <sdf version='1.7' xmlns:xacro="http://www.ros.org/wiki/xacro">
   <world name='default'>
 
-    <xacro:include filename="/home/user/colcon_ws/src/simulation/models/tracks/physics.urdf.xacro"/>
+    <xacro:include filename="$(find simulation)/models/tracks/physics.urdf.xacro"/>
     <xacro:physics_tags/>
     
     <!-- <include>
@@ -65,7 +65,7 @@
       </link>
     </model>
 
-    <xacro:include filename="/home/user/colcon_ws/src/simulation/models/cones/cone.sdf.xacro"/>
+    <xacro:include filename="$(find simulation)/simulation/models/cones/cone.sdf.xacro"/>
 
     <model name='blue_cones'>
       <xacro:cone name="blue_1" type="blue" pose="-17.0129 9.72719 0.079001 0 -0 0"/>
