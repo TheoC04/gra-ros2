@@ -91,15 +91,22 @@ Make sure to install `ros-jazzy-desktop` (which includes RViz2).
     ```bash
     git clone https://github.com/GryphonRacingAI/gra-ros2.git
     ```
+4. **Install Necessary Tools**
+    ```bash
+    sudo apt install -y python3-colcon-common-extensions
+    sudo apt install -y python-rosdep
+    sudo rosdep init
+    rosdep update
+    ```
 
-4. **Resolve Dependencies:**
+5. **Resolve Dependencies:**
 
     ```bash
     cd ~/colcon_ws
     rosdep install -i --from-path src --rosdistro jazzy -y
     ```
 
-5. **Build and Source the Workspace:**
+6. **Build and Source the Workspace:**
 
     ```bash
     cd ~/colcon_ws
