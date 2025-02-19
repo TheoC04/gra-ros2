@@ -1,45 +1,119 @@
 # Prerequisites
-This package is intended for ROS 2 Jazzy. Follow the [installation guide](https://docs.ros.org/en/jazzy/Installation.html)
+This package is intended for the following:
 
-Make sure to install `ros-jazzy-desktop`, and make sure RViz2 is installed.
-```
-sudo apt install ros-jazzy-desktop
-```
-Install [Gazebo Harmonic](https://gazebosim.org/docs/harmonic/install_ubuntu/), then proceed.
+- **Ubuntu 24.04**
+- **ROS 2 Jazzy**
+- **Gazebo Harmonic**
+
+
+**Important:** For the most up-to-date installation instructions, please refer to the official pages:  
+- [ROS 2 Jazzy Installation Guide](https://docs.ros.org/en/jazzy/Installation.html)  
+- [Gazebo Harmonic Installation Guide](https://gazebosim.org/docs/harmonic/install_ubuntu/)
+
+Make sure to install `ros-jazzy-desktop` (which includes RViz2).
+
+<details open>
+  <summary><h2>Install ROS 2 Jazzy</h2></summary>
+
+  1. **Enable the Ubuntu Universe Repository:**
+  
+      ```bash
+      sudo apt install software-properties-common
+      sudo add-apt-repository universe
+      ```
+
+  2. **Add ROS 2 GPG key:**
+
+      ```bash
+      sudo apt update && sudo apt install curl -y
+      sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+      ```
+
+  3. **Add ROS 2 repository:**
+
+      ```bash
+      echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+      ```
+
+  4. **Install ROS 2:**
+
+      ```bash
+      sudo apt update
+      sudo apt upgrade
+      sudo apt install ros-jazzy-desktop
+      ```
+
+</details>
+<details open>
+  <summary><h2>Install Gazebo Harmonic</h2></summary>
+
+  1. **Install necessary tools:**
+
+      ```bash
+      sudo apt-get update
+      sudo apt-get install curl lsb-release gnupg
+      ```
+  2. **Add Gazebo repository:**
+
+      ```bash
+      sudo curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+      echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+      ```
+
+  3. **Install Gazebo Harmonic:**
+
+      ```bash
+      sudo apt-get update
+      sudo apt-get install gz-harmonic
+      ```
+
+</details>
+
+---
 
 # Build Instructions
 
-Source the ROS 2 environment
-```bash
-source /opt/ros/jazzy/setup.bash
-```
+1. **Source the ROS 2 Environment:**
 
-Create a workspace
-```bash
-mkdir -p ~/colcon_ws/src
-cd ~/colcon_ws/src
-```
+    ```bash
+    source /opt/ros/jazzy/setup.bash
+    ```
 
-Clone the repository into the source directory
-```bash
-git clone https://github.com/GryphonRacingAI/gra-ros2.git
-```
+2. **Create a Workspace:**
 
-Resolve dependencies
-```bash
-cd ~/colcon_ws
-rosdep install -i --from-path src --rosdistro jazzy -y
-```
+    ```bash
+    mkdir -p ~/colcon_ws/src
+    cd ~/colcon_ws/src
+    ```
 
-Then build and source the workspace
-```bash
-cd ~/colcon_ws
-colcon build --symlink-install
-source install/setup.bash
-```
+3. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/GryphonRacingAI/gra-ros2.git
+    ```
+
+4. **Resolve Dependencies:**
+
+    ```bash
+    cd ~/colcon_ws
+    rosdep install -i --from-path src --rosdistro jazzy -y
+    ```
+
+5. **Build and Source the Workspace:**
+
+    ```bash
+    cd ~/colcon_ws
+    colcon build --symlink-install
+    source install/setup.bash
+    ```
+
+---
 
 # Usage
-To source the overlays automatically every time you open a new terminal, add the following lines to the .bashrc script:
+
+## Environment Setup
+
+To source the overlays automatically every time you open a new terminal, add the following lines to the `.bashrc` script:
 ```bash
 source /opt/ros/jazzy/setup.bash
 source ~/colcon_ws/install/setup.bash
@@ -57,14 +131,19 @@ echo "export GZ_SIM_RESOURCE_PATH=$HOME/colcon_ws/install/simulation/share/" >> 
 ```
 then continue in a new terminal.
 
+## Launch the Simulator
+
 To run the simulator, run the following commands
 
 ```bash
 ros2 launch simulation dynamic_event.launch.py autostart:=true
 ```
 This should launch Gazebo Sim, with the acceleration track and ADS-DV vehicle model spawned in.
+![Example](https://github.com/user-attachments/assets/99254e31-ed0a-49ae-9bee-ec22e6a2810f)
 
-The following launch arguments are provided for this launch file
+## Launch Arguments
+
+The following launch arguments are provided for `dynamic_event.launch.py`
   | Argument |Description| Options | Default
 --|--|--|--|
 event | specifies which track to spawn in based on the dynamic event |`acceleration`, `skidpad`, `autocross`, `trackdrive` |`acceleration`
