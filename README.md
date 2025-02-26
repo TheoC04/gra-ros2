@@ -94,7 +94,7 @@ Make sure to install `ros-jazzy-desktop` (which includes RViz2).
 4. **Install Necessary Tools**
     ```bash
     sudo apt install -y python3-colcon-common-extensions
-    sudo apt install -y python-rosdep
+    sudo apt install -y python3-rosdep
     sudo rosdep init
     rosdep update
     ```
