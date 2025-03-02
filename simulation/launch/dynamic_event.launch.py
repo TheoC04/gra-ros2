@@ -251,6 +251,22 @@ def generate_launch_description():
         ]
     )
 
+    publish_spawn_pose = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="spawn_pose_publisher",
+        arguments=[
+            "--x", LaunchConfiguration('x'),
+            "--y", LaunchConfiguration('y'),
+            "--z", LaunchConfiguration('z'),
+            "--roll", LaunchConfiguration('R'),
+            "--pitch", LaunchConfiguration('P'),
+            "--yaw", LaunchConfiguration('Y'),
+            "--frame-id", LaunchConfiguration('world'),
+            "--child-frame-id", "ads_dv"
+        ]
+    )
+
     ros_gz_bridge = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('simulation'), 'launch'),
@@ -274,5 +290,6 @@ def generate_launch_description():
         ros_gz_sim,
         spawn_vehicle,
         robot_state_publisher,
+        spawn_pose_publisher,
         ros_gz_bridge
     ])
