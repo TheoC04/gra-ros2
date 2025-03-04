@@ -11,7 +11,9 @@
             <mass value="0.001"/>
             <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
         </inertial>
-        <sensor name='VLP-16' type='gpu_lidar'>"
+    </link>
+    <gazebo reference="velodyne">
+        <sensor name='VLP-16' type='gpu_lidar'>
             <topic>velodyne_points</topic>
             <update_rate>10</update_rate>
             <ray>
@@ -38,5 +40,5 @@
             <always_on>1</always_on>
             <visualize>true</visualize>
         </sensor>
-    </link>
+    </gazebo>
 </robot>
