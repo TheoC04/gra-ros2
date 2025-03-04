@@ -34,10 +34,10 @@
     </xacro:macro>
 
     <!-- Front Left Wheel -->
-    <xacro:wheel name="front_left_wheel" parent="front_left_wheel_steering_link" x="0" y="0" z="0" roll="-1.5707" pitch="0" yaw="0"/>
+    <xacro:wheel name="front_left_wheel" parent="front_left_wheel_steering_link" x="0" y="0.09825" z="0" roll="-1.5707" pitch="0" yaw="0"/>
 
     <!-- Front Right Wheel -->
-    <xacro:wheel name="front_right_wheel" parent="front_right_wheel_steering_link" x="0" y="0" z="0" roll="-1.5707" pitch="0" yaw="0"/>
+    <xacro:wheel name="front_right_wheel" parent="front_right_wheel_steering_link" x="0" y="-0.09825" z="0" roll="-1.5707" pitch="0" yaw="0"/>
 
     <!-- Rear Left Wheel -->
     <xacro:wheel name="rear_left_wheel" parent="chassis" x="-0.767" y="0.57" z="-0.0235" roll="-1.5707" pitch="0" yaw="0"/>

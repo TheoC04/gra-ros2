@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ads_dv">
 
     <!-- Wheels and Joints -->
-    <xacro:include filename="/home/user/colcon_ws/src/simulation/models/vehicle/wheels.xacro" />
+    <xacro:include filename="$(find simulation)/models/vehicle/wheels.xacro" />
 
     <link name='chassis'>
         <inertial>
@@ -12,7 +12,7 @@
         <visual name='visual'>
             <origin xyz="0 0 0"/>
             <geometry>
-                <mesh filename="/home/user/colcon_ws/src/simulation/models/vehicle/ads-dv.stl" scale="1 1 1"/>
+                <mesh filename="package://simulation/models/vehicle/ads-dv.stl" scale="1 1 1"/>
             </geometry>
             <material name="chassis_mat">
                 <color rgba="0.0 0.2 0.13 1"/>
@@ -24,12 +24,6 @@
             </geometry>
         </collision>
     </link>
-
-    <!-- Depth Camera -->
-    <xacro:include filename="/home/user/colcon_ws/src/simulation/models/vehicle/depth_camera.xacro" />
-
-    <!-- Velodyne -->
-    <xacro:include filename="/home/user/colcon_ws/src/simulation/models/vehicle/velodyne.xacro" />
 
     <!-- Base Link -->
     <link name='base_link'>
@@ -62,7 +56,7 @@
         <child link="front_left_wheel_steering_link"/>
         <axis xyz="0 0 1"/>
         <limit lower="-0.424250477138" upper="0.424250477138" velocity="10000" effort="10000"/>
-        <origin xyz="0.767 0.57 -0.0235" rpy="0 0 0"/>
+        <origin xyz="0.767 0.47175 -0.0235" rpy="0 0 0"/>
     </joint>
 
     <link name="front_right_wheel_steering_link">
@@ -82,11 +76,10 @@
         <child link="front_right_wheel_steering_link"/>
         <axis xyz="0 0 1"/>
         <limit lower="-0.424250477138" upper="0.424250477138" velocity="10000" effort="10000"/>
-        <origin xyz="0.767 -0.57 -0.0235" rpy="0 0 0"/>
+        <origin xyz="0.767 -0.47175 -0.0235" rpy="0 0 0"/>
     </joint>
 
     <!-- Fixed Joints -->
-
     <joint name="base_to_camera" type="fixed">
         <parent link="base_link"/>
         <child link="camera_link"/>
@@ -114,6 +107,12 @@
         <preserveFixedJoint>True</preserveFixedJoint>
     </gazebo>
 
+    <!-- Sim (Stereo + Depth + Logical) Camera -->
+    <xacro:include filename="$(find simulation)/models/vehicle/sim_camera.xacro" />
+
+    <!-- Velodyne -->
+    <xacro:include filename="$(find simulation)/models/vehicle/velodyne.xacro" />
+
     <!-- Ackermann Steering Plugin -->
     <gazebo>
         <plugin filename="gz-sim-ackermann-steering-system" name="gz::sim::systems::AckermannSteering">
@@ -129,10 +128,18 @@
             <wheel_separation>1.2</wheel_separation>
             <wheel_radius>0.2575</wheel_radius>
             <topic>cmd_vel</topic>
-            <min_velocity>0.0</min_velocity>
+            <min_velocity>-10.0</min_velocity> <!-- the plugin currently prevents steering to the right if this is set to 0 -->
             <max_velocity>30.0</max_velocity>
             <min_acceleration>-5.2</min_acceleration>
             <max_acceleration>5.2</max_acceleration>
+            <frame_id>ads_dv</frame_id>
+            <child_frame_id>base_link</child_frame_id>
+        </plugin>
+        <plugin name="gz::sim::systems::LogicalCamera" filename="gz-sim-logical-camera-system">
+            <render_engine>ogre2</render_engine>
+        </plugin>
+         <plugin name="gz::sim::systems::JointStatePublisher" filename="gz-sim-joint-state-publisher-system">
+            <topic>/model/ads_dv/joint_state</topic>
         </plugin>
     </gazebo>
 </robot>
