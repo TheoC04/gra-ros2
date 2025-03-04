@@ -15,7 +15,7 @@
     <gazebo reference="velodyne">
         <sensor name='VLP-16' type='gpu_lidar'>
             <gz_frame_id>velodyne</gz_frame_id> <!-- Change to frame_id when sdformat_urdf's parser supports sdf spec 1.12 -->
-            <topic>velodyne_points</topic>
+            <topic>velodyne</topic>
             <update_rate>10</update_rate>
             <ray>
                 <scan>
