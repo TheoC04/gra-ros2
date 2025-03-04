@@ -28,6 +28,12 @@
   gz_type_name: "gz.msgs.CameraInfo"
   direction: GZ_TO_ROS
 
+- ros_topic_name: "/logical_camera"
+  gz_topic_name: "/logical_camera"
+  ros_type_name: "ros_gz_interfaces/msg/LogicalCameraImage"
+  gz_type_name: "gz.msgs.LogicalCameraImage"
+  direction: GZ_TO_ROS
+
 - ros_topic_name: "/ads_dv/cmd_vel"
   gz_topic_name: "/model/ads_dv/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
