@@ -56,4 +56,52 @@
     <gazebo reference='camera_to_optical'>
         <preserveFixedJoint>True</preserveFixedJoint>
     </gazebo>
+
+    <!-- Logical Camera -->
+    <link name='logical_camera_link'>
+        <inertial>
+            <mass value="0.001"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+        <sensor name='logical_camera' type='logical_camera'>
+            <update_rate>30</update_rate>
+            <topic>logical_camera</topic>
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <enable_metrics>true</enable_metrics>
+            <logical_camera>
+            <near>1.5</near>
+            <far>35</far>
+            <aspect_ratio>1.333333333333333</aspect_ratio>
+            <horizontal_fov>1.9198622000000001</horizontal_fov>
+            </logical_camera>
+        </sensor>
+    </link>
+    <joint name='base_to_logical_camera' type='fixed'>
+        <parent link="base_link"/>
+        <child link="logical_camera_link"/>
+        <origin xyz="0.48649999999999999 0 0.67100000000000004" rpy="0 0 0"/>
+        <axis>
+            <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+            </dynamics>
+            <xyz>0 0 1</xyz>
+            <limit>
+                <lower>-inf</lower>
+                <upper>inf</upper>
+            </limit>
+        </axis>
+        <physics>
+            <ode>
+                <limit>
+                <cfm>0</cfm>
+                <erp>0.20000000000000001</erp>
+                </limit>
+            </ode>
+        </physics>
+    </joint>
+    <gazebo reference='base_to_logical_camera'>
+        <preserveFixedJoint>True</preserveFixedJoint>
+    </gazebo>
 </robot>
