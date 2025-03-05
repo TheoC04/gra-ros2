@@ -251,7 +251,7 @@ def generate_launch_description():
         ]
     )
 
-    publish_spawn_pose = Node(
+    spawn_pose_publisher = Node(
         package="tf2_ros",
         executable="static_transform_publisher",
         name="spawn_pose_publisher",
