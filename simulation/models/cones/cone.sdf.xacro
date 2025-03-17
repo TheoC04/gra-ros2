@@ -12,12 +12,24 @@
                 </geometry>
             </visual>
             <collision name="collision">
-                <geometry>
-                    <!-- Simpler collision model for performance boost -->
-                    <box>
-                        <size>0.2 0.2 0.5</size>
-                    </box>
-                </geometry>
+                <xacro:if value="${type == 'orange_big'}">
+                    <pose>0 0 0.232 0 0 0</pose>
+                    <geometry>
+                        <!-- Simpler collision model for performance boost -->
+                        <box>
+                            <size>0.26 0.26 0.53</size>
+                        </box>
+                    </geometry>
+                </xacro:if>
+                <xacro:unless value="${type == 'orange_big'}">
+                    <geometry>
+                        <!-- Simpler collision model for performance boost -->
+                        <box>
+                            <size>0.22 0.23 0.3</size>
+                        </box>
+                    </geometry>
+                </xacro:unless>
+
                 <surface>
                     <!-- Big performance boost by ignoring the friction of the cones-->
                     <friction>
