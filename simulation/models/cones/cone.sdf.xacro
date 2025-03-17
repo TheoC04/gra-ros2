@@ -21,6 +21,18 @@
                         <size>0.2 0.2 0.5</size>
                     </box>
                 </geometry>
+                <surface>
+                    <!-- Big performance boost by ignoring the friction of the cones-->
+                    <friction>
+                        <ode>
+                            <mu>0</mu>
+                        </ode>
+                        <bullet>
+                            <friction>0</friction>
+                            <friction2>0</friction2>
+                        </bullet>
+                    </friction>
+                </surface>
             </collision>
 
             <!-- Different inertial properties for different types of cones -->
