@@ -94,12 +94,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -139,12 +136,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -184,12 +178,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -229,12 +220,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -274,12 +262,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -319,12 +304,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -364,12 +346,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -409,12 +388,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -454,12 +430,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -499,12 +472,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -544,12 +514,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -589,12 +556,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -634,12 +598,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -679,12 +640,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -724,12 +682,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -769,12 +724,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -814,12 +766,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -859,12 +808,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -904,12 +850,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -949,12 +892,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -994,12 +934,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1039,12 +976,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1084,12 +1018,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1129,12 +1060,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1174,12 +1102,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1219,12 +1144,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1264,12 +1186,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1309,12 +1228,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1354,12 +1270,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1399,12 +1312,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1444,12 +1354,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1489,12 +1396,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1534,12 +1438,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1579,12 +1480,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1624,12 +1522,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1669,12 +1564,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1714,12 +1606,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1761,12 +1650,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1806,12 +1692,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1851,12 +1734,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1896,12 +1776,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1941,12 +1818,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -1986,12 +1860,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2031,12 +1902,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2076,12 +1944,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2121,12 +1986,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2166,12 +2028,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2211,12 +2070,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2256,12 +2112,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2301,12 +2154,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2346,12 +2196,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2391,12 +2238,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2436,12 +2280,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2481,12 +2322,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2526,12 +2364,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2571,12 +2406,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2616,12 +2448,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2661,12 +2490,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2706,12 +2532,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2751,12 +2574,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2796,12 +2616,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2841,12 +2658,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2886,12 +2700,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2931,12 +2742,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -2976,12 +2784,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3021,12 +2826,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3066,12 +2868,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3111,12 +2910,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3158,12 +2954,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3203,12 +2996,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3248,12 +3038,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -3293,12 +3080,9 @@
         </visual>
         <collision name="collision">
           <geometry>
-            <!-- <mesh>
-                        <uri>model://simulation/models/cones/cone_${type}/mesh.dae</uri>
-                    </mesh> -->
             <!-- Simpler collision model for performance boost -->
             <box>
-              <size>0.2 0.2 0.5</size>
+              <size>0.22 0.23 0.3</size>
             </box>
           </geometry>
           <surface>
