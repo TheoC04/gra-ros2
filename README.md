@@ -89,7 +89,7 @@ Make sure to install `ros-jazzy-desktop` (which includes RViz2).
 3. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/GryphonRacingAI/gra-ros2.git
+    git clone https://github.com/GryphonRacingAI/gra-ros2.git .
     ```
 4. **Install Necessary Tools**
     ```bash
