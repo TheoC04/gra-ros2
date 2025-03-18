@@ -79,7 +79,7 @@ class PredictNode(Node):
             self.get_parameter("classes").get_parameter_value().integer_array_value
         )
         device = self.get_parameter("device").get_parameter_value().string_value or None
-        results = self.model.predict(
+        results = self.model.track(
             source=cv_image,
             conf=conf_thres,
             iou=iou_thres,
