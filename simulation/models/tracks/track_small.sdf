@@ -85,7 +85,7 @@
     <model name="blue_cones">
       <static>true</static>
       <link name="blue_1">
-        <pose>-17.0129 9.72719 0.079001 0 -0 0</pose>
+        <pose>-17.0129 9.72719 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -127,7 +127,7 @@
         </inertial>
       </link>
       <link name="blue_2">
-        <pose>-12.7541 12.8712 0.079001 0 -0 0</pose>
+        <pose>-12.7541 12.8712 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -169,7 +169,7 @@
         </inertial>
       </link>
       <link name="blue_3">
-        <pose>-8.31569 13.0924 0.079001 0 -0 0</pose>
+        <pose>-8.31569 13.0924 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -211,7 +211,7 @@
         </inertial>
       </link>
       <link name="blue_4">
-        <pose>9.62956 15.8379 0.084236 0 -0 0</pose>
+        <pose>9.62956 15.8379 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -253,7 +253,7 @@
         </inertial>
       </link>
       <link name="blue_5">
-        <pose>12.492 17.0404 0.083705 0 -0 0</pose>
+        <pose>12.492 17.0404 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -295,7 +295,7 @@
         </inertial>
       </link>
       <link name="blue_6">
-        <pose>15.1389 16.5025 0.082223 0 -0 0</pose>
+        <pose>15.1389 16.5025 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -337,7 +337,7 @@
         </inertial>
       </link>
       <link name="blue_7">
-        <pose>19.5034 13.6361 0.079669 0 -0 0</pose>
+        <pose>19.5034 13.6361 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -379,7 +379,7 @@
         </inertial>
       </link>
       <link name="blue_8">
-        <pose>20.8922 11.7012 0.056623 -0.001555 0.00019 -5.2e-05</pose>
+        <pose>20.8922 11.7012 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -421,7 +421,7 @@
         </inertial>
       </link>
       <link name="blue_9">
-        <pose>17.5221 15.3812 0.082077 -0.001555 0.00019 -5.2e-05</pose>
+        <pose>17.5221 15.3812 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -463,7 +463,7 @@
         </inertial>
       </link>
       <link name="blue_10">
-        <pose>21.4761 8.79574 0.079001 0 -0 0</pose>
+        <pose>21.4761 8.79574 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -505,7 +505,7 @@
         </inertial>
       </link>
       <link name="blue_11">
-        <pose>20.9992 5.27662 0.079001 0 -0 0</pose>
+        <pose>20.9992 5.27662 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -547,7 +547,7 @@
         </inertial>
       </link>
       <link name="blue_12">
-        <pose>19.9925 2.24053 0.079001 0 -0 0</pose>
+        <pose>19.9925 2.24053 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -589,7 +589,7 @@
         </inertial>
       </link>
       <link name="blue_13">
-        <pose>19.0983 -0.671871 0.079001 0 -0 0</pose>
+        <pose>19.0983 -0.671871 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -631,7 +631,7 @@
         </inertial>
       </link>
       <link name="blue_14">
-        <pose>17.1824 -3.23994 0.079001 0 -0 0</pose>
+        <pose>17.1824 -3.23994 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -673,7 +673,7 @@
         </inertial>
       </link>
       <link name="blue_15">
-        <pose>11.114 -6.74408 0.079001 0 -0 0</pose>
+        <pose>11.114 -6.74408 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -715,7 +715,7 @@
         </inertial>
       </link>
       <link name="blue_16">
-        <pose>-4.06552 13.3637 0.079001 0 -0 0</pose>
+        <pose>-4.06552 13.3637 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -757,7 +757,7 @@
         </inertial>
       </link>
       <link name="blue_17">
-        <pose>14.2831 -5.26437 0.079001 0 -0 0</pose>
+        <pose>14.2831 -5.26437 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -799,7 +799,7 @@
         </inertial>
       </link>
       <link name="blue_18">
-        <pose>8.25363 -8.53889 0.079001 0 -0 0</pose>
+        <pose>8.25363 -8.53889 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -841,7 +841,7 @@
         </inertial>
       </link>
       <link name="blue_19">
-        <pose>5.06185 -10.1551 0.079001 0 -0 0</pose>
+        <pose>5.06185 -10.1551 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -883,7 +883,7 @@
         </inertial>
       </link>
       <link name="blue_20">
-        <pose>1.42086 -11.9634 0.079001 0 -0 0</pose>
+        <pose>1.42086 -11.9634 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -925,7 +925,7 @@
         </inertial>
       </link>
       <link name="blue_21">
-        <pose>-2.4975 -14.0305 0.079001 0 -0 0</pose>
+        <pose>-2.4975 -14.0305 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -967,7 +967,7 @@
         </inertial>
       </link>
       <link name="blue_22">
-        <pose>-5.74864 -16.1217 0.079001 0 -0 0</pose>
+        <pose>-5.74864 -16.1217 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1009,7 +1009,7 @@
         </inertial>
       </link>
       <link name="blue_23">
-        <pose>-9.34841 -17.1551 0.079001 0 -0 0</pose>
+        <pose>-9.34841 -17.1551 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1051,7 +1051,7 @@
         </inertial>
       </link>
       <link name="blue_24">
-        <pose>-12.2114 -16.6459 0.079001 0 -0 0</pose>
+        <pose>-12.2114 -16.6459 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1093,7 +1093,7 @@
         </inertial>
       </link>
       <link name="blue_25">
-        <pose>-14.4625 -14.9249 0.079001 0 -0 0</pose>
+        <pose>-14.4625 -14.9249 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1135,7 +1135,7 @@
         </inertial>
       </link>
       <link name="blue_26">
-        <pose>-16.2427 -13.276 0.079001 0 -0 0</pose>
+        <pose>-16.2427 -13.276 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1177,7 +1177,7 @@
         </inertial>
       </link>
       <link name="blue_27">
-        <pose>-0.131239 13.3125 0.079001 0 -0 0</pose>
+        <pose>-0.131239 13.3125 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1219,7 +1219,7 @@
         </inertial>
       </link>
       <link name="blue_28">
-        <pose>-17.8615 -11.5349 0.079001 0 -0 0</pose>
+        <pose>-17.8615 -11.5349 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1261,7 +1261,7 @@
         </inertial>
       </link>
       <link name="blue_29">
-        <pose>-19.1945 -8.52656 0.079001 0 -0 0</pose>
+        <pose>-19.1945 -8.52656 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1303,7 +1303,7 @@
         </inertial>
       </link>
       <link name="blue_30">
-        <pose>-18.9382 -5.15509 -4.97705 0 -0 0</pose>
+        <pose>-18.9382 -5.15509 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1345,7 +1345,7 @@
         </inertial>
       </link>
       <link name="blue_31">
-        <pose>-18.8625 -4.02997 0.079001 0 -0 0</pose>
+        <pose>-18.8625 -4.02997 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1387,7 +1387,7 @@
         </inertial>
       </link>
       <link name="blue_32">
-        <pose>-18.6872 -0.45783 0.079001 0 -0 0</pose>
+        <pose>-18.6872 -0.45783 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1429,7 +1429,7 @@
         </inertial>
       </link>
       <link name="blue_33">
-        <pose>-18.1384 2.83132 0.079001 0 -0 0</pose>
+        <pose>-18.1384 2.83132 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1471,7 +1471,7 @@
         </inertial>
       </link>
       <link name="blue_34">
-        <pose>-17.8432 6.27091 0.079001 0 -0 0</pose>
+        <pose>-17.8432 6.27091 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1513,7 +1513,7 @@
         </inertial>
       </link>
       <link name="blue_35">
-        <pose>-15.5443 12.0063 0.063291 -0.001555 0.00019 -5.2e-05</pose>
+        <pose>-15.5443 12.0063 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1555,7 +1555,7 @@
         </inertial>
       </link>
       <link name="blue_36">
-        <pose>3.50416 13.7245 0.080395 0 -0 0</pose>
+        <pose>3.50416 13.7245 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1597,7 +1597,7 @@
         </inertial>
       </link>
       <link name="blue_37">
-        <pose>7.13676 14.727 0.083062 0 -0 0</pose>
+        <pose>7.13676 14.727 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1642,7 +1642,7 @@
     <model name="yellow_cones">
       <static>true</static>
       <link name="yellow_1">
-        <pose>-12.2686 6.61784 0.070966 -0.001555 0.00019 -5.2e-05</pose>
+        <pose>-12.2686 6.61784 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1684,7 +1684,7 @@
         </inertial>
       </link>
       <link name="yellow_2">
-        <pose>-9.65737 7.2378 0.083534 0.001019 -0.000437 -0.000128</pose>
+        <pose>-9.65737 7.2378 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1726,7 +1726,7 @@
         </inertial>
       </link>
       <link name="yellow_3">
-        <pose>7.33516 9.03961 0.083556 0 -0 0</pose>
+        <pose>7.33516 9.03961 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1768,7 +1768,7 @@
         </inertial>
       </link>
       <link name="yellow_4">
-        <pose>10.548 10.5892 0.085274 0 -0 0</pose>
+        <pose>10.548 10.5892 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1810,7 +1810,7 @@
         </inertial>
       </link>
       <link name="yellow_5">
-        <pose>13.1479 11.1316 0.08476 0 -0 0</pose>
+        <pose>13.1479 11.1316 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1852,7 +1852,7 @@
         </inertial>
       </link>
       <link name="yellow_6">
-        <pose>15.2725 10.0791 0.08035 0 -0 0</pose>
+        <pose>15.2725 10.0791 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1894,7 +1894,7 @@
         </inertial>
       </link>
       <link name="yellow_7">
-        <pose>16.8037 8.23821 0.079433 0 -0 0</pose>
+        <pose>16.8037 8.23821 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1936,7 +1936,7 @@
         </inertial>
       </link>
       <link name="yellow_8">
-        <pose>-6.90273 7.20128 0.080073 0 -0 0</pose>
+        <pose>-6.90273 7.20128 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -1978,7 +1978,7 @@
         </inertial>
       </link>
       <link name="yellow_9">
-        <pose>16.7063 6.10772 0.079001 0 -0 0</pose>
+        <pose>16.7063 6.10772 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2020,7 +2020,7 @@
         </inertial>
       </link>
       <link name="yellow_10">
-        <pose>15.876 3.47906 0.079001 0 -0 0</pose>
+        <pose>15.876 3.47906 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2062,7 +2062,7 @@
         </inertial>
       </link>
       <link name="yellow_11">
-        <pose>15.106 1.5027 0.079001 0 -0 0</pose>
+        <pose>15.106 1.5027 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2104,7 +2104,7 @@
         </inertial>
       </link>
       <link name="yellow_12">
-        <pose>13.6765 -0.472612 0.079001 0 -0 0</pose>
+        <pose>13.6765 -0.472612 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2146,7 +2146,7 @@
         </inertial>
       </link>
       <link name="yellow_13">
-        <pose>9.41953 -2.84739 0.079001 0 -0 0</pose>
+        <pose>9.41953 -2.84739 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2188,7 +2188,7 @@
         </inertial>
       </link>
       <link name="yellow_14">
-        <pose>12.0732 -1.43122 0.079001 0 -0 0</pose>
+        <pose>12.0732 -1.43122 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2230,7 +2230,7 @@
         </inertial>
       </link>
       <link name="yellow_15">
-        <pose>7.26282 -3.9408 0.079001 0 -0 0</pose>
+        <pose>7.26282 -3.9408 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2272,7 +2272,7 @@
         </inertial>
       </link>
       <link name="yellow_16">
-        <pose>4.65159 -5.15509 0.079001 0 -0 0</pose>
+        <pose>4.65159 -5.15509 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2314,7 +2314,7 @@
         </inertial>
       </link>
       <link name="yellow_17">
-        <pose>1.78774 -6.66723 0.079001 0 -0 0</pose>
+        <pose>1.78774 -6.66723 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2356,7 +2356,7 @@
         </inertial>
       </link>
       <link name="yellow_18">
-        <pose>-1.97969 -8.56329 0.079001 0 -0 0</pose>
+        <pose>-1.97969 -8.56329 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2398,7 +2398,7 @@
         </inertial>
       </link>
       <link name="yellow_19">
-        <pose>-3.80615 7.33616 0.079001 0 -0 0</pose>
+        <pose>-3.80615 7.33616 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2440,7 +2440,7 @@
         </inertial>
       </link>
       <link name="yellow_20">
-        <pose>-5.18123 -10.5555 0.079001 0 -0 0</pose>
+        <pose>-5.18123 -10.5555 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2482,7 +2482,7 @@
         </inertial>
       </link>
       <link name="yellow_21">
-        <pose>-8.34841 -12.1551 0.079001 0 -0 0</pose>
+        <pose>-8.34841 -12.1551 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2524,7 +2524,7 @@
         </inertial>
       </link>
       <link name="yellow_22">
-        <pose>-9.78487 -11.8592 0.079001 0 -0 0</pose>
+        <pose>-9.78487 -11.8592 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2566,7 +2566,7 @@
         </inertial>
       </link>
       <link name="yellow_23">
-        <pose>-11.3484 -11.1551 0.079001 0 -0 0</pose>
+        <pose>-11.3484 -11.1551 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2608,7 +2608,7 @@
         </inertial>
       </link>
       <link name="yellow_24">
-        <pose>-13.2946 -8.64709 0.079001 0 -0 0</pose>
+        <pose>-13.2946 -8.64709 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2650,7 +2650,7 @@
         </inertial>
       </link>
       <link name="yellow_25">
-        <pose>-14.2998 -6.05581 0.079001 0 -0 0</pose>
+        <pose>-14.2998 -6.05581 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2692,7 +2692,7 @@
         </inertial>
       </link>
       <link name="yellow_26">
-        <pose>-14.0528 -3.05427 0.079001 0 -0 0</pose>
+        <pose>-14.0528 -3.05427 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2734,7 +2734,7 @@
         </inertial>
       </link>
       <link name="yellow_27">
-        <pose>-13.6807 -0.101053 0.079001 0 -0 0</pose>
+        <pose>-13.6807 -0.101053 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2776,7 +2776,7 @@
         </inertial>
       </link>
       <link name="yellow_28">
-        <pose>-13.3484 2.84491 0.079001 0 -0 0</pose>
+        <pose>-13.3484 2.84491 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2818,7 +2818,7 @@
         </inertial>
       </link>
       <link name="yellow_29">
-        <pose>-0.595997 7.27843 0.079001 0 -0 0</pose>
+        <pose>-0.595997 7.27843 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2860,7 +2860,7 @@
         </inertial>
       </link>
       <link name="yellow_30">
-        <pose>-13.3484 4.84491 0.079001 0 -0 0</pose>
+        <pose>-13.3484 4.84491 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2902,7 +2902,7 @@
         </inertial>
       </link>
       <link name="yellow_31">
-        <pose>2.90884 7.57594 0.07997 0 -0 0</pose>
+        <pose>2.90884 7.57594 0.15 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2947,7 +2947,7 @@
     <model name="big_orange_cones">
       <static>true</static>
       <link name="orange_big_1">
-        <pose>1.14507 3.03746 0.035 0 -0 0</pose>
+        <pose>1.14507 3.03746 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -2989,7 +2989,7 @@
         </inertial>
       </link>
       <link name="orange_big_2">
-        <pose>-0.919189 2.98971 0.035 0 -0 0</pose>
+        <pose>-0.919189 2.98971 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -3031,7 +3031,7 @@
         </inertial>
       </link>
       <link name="orange_big_3">
-        <pose>1.04889 -3.01482 0.035 0 -0 0</pose>
+        <pose>1.04889 -3.01482 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
@@ -3073,7 +3073,7 @@
         </inertial>
       </link>
       <link name="orange_big_4">
-        <pose>-1.21717 -3.06412 0.035 0 -0 0</pose>
+        <pose>-1.21717 -3.06412 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
