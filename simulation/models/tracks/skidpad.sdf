@@ -92,6 +92,7 @@
       </link>
     </model>
     <model name="blue_cones">
+      <static>true</static>
       <link name="blue_1">
         <pose>-1.637 0 1 0 -0 0</pose>
         <visual name="visual">
@@ -1312,6 +1313,7 @@
       </link>
     </model>
     <model name="yellow_cones">
+      <static>true</static>
       <link name="yellow_1">
         <pose>16.862 0 1 0 -0 0</pose>
         <visual name="visual">
@@ -2532,6 +2534,7 @@
       </link>
     </model>
     <model name="orange_cones">
+      <static>true</static>
       <link name="orange_1">
         <pose>-1.637 -9 1 0 -0 0</pose>
         <visual name="visual">
@@ -3374,6 +3377,7 @@
       </link>
     </model>
     <model name="big_orange_cones">
+      <static>true</static>
       <link name="orange_big_1">
         <pose>-1.783 1.4851 1 0 -0 0</pose>
         <visual name="visual">

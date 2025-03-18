@@ -68,6 +68,7 @@
     <xacro:include filename="$(find simulation)/models/cones/cone.sdf.xacro"/>
 
     <model name='blue_cones'>
+      <static>true</static>
       <xacro:cone name="blue_1" type="blue" pose="-17.0129 9.72719 0.079001 0 -0 0"/>
       <xacro:cone name="blue_2" type="blue" pose="-12.7541 12.8712 0.079001 0 -0 0"/>
       <xacro:cone name="blue_3" type="blue" pose="-8.31569 13.0924 0.079001 0 -0 0"/>
@@ -108,6 +109,7 @@
     </model>
 
     <model name='yellow_cones'>
+      <static>true</static>
       <xacro:cone name="yellow_1" type="yellow" pose="-12.2686 6.61784 0.070966 -0.001555 0.00019 -5.2e-05"/>
       <xacro:cone name="yellow_2" type="yellow" pose="-9.65737 7.2378 0.083534 0.001019 -0.000437 -0.000128"/>
       <xacro:cone name="yellow_3" type="yellow" pose="7.33516 9.03961 0.083556 0 -0 0"/>
@@ -142,6 +144,7 @@
     </model>
 
     <model name='big_orange_cones'>
+      <static>true</static>
       <xacro:cone name="orange_big_1" type="orange" pose="1.14507 3.03746 0.035 0 -0 0"/>
       <xacro:cone name="orange_big_2" type="orange" pose="-0.919189 2.98971 0.035 0 -0 0"/>
       <xacro:cone name="orange_big_3" type="orange" pose="1.04889 -3.01482 0.035 0 -0 0"/>
