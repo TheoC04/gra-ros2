@@ -41,6 +41,9 @@ def generate_launch_description():
     autostart_launch_arg = DeclareLaunchArgument(
         "autostart", default_value=TextSubstitution(text="true")
     )
+    verbosity_launch_arg = DeclareLaunchArgument(
+        "verbosity", default_value=TextSubstitution(text="1")
+    )
     
     set_autostart = SetLaunchConfiguration(
         name='autostart_flag',
@@ -212,7 +215,9 @@ def generate_launch_description():
 
     set_gz_args = SetLaunchConfiguration(
         name='gz_args',
-        value=[LaunchConfiguration('map_file'), ' ', LaunchConfiguration('autostart_flag')]
+        value=[LaunchConfiguration('map_file'), ' ',
+               LaunchConfiguration('autostart_flag'), ' ',
+               '-v ', LaunchConfiguration('verbosity')]
     )
 
     ros_gz_sim = IncludeLaunchDescription(
@@ -279,6 +284,7 @@ def generate_launch_description():
         model_file_launch_arg,
         name_launch_arg,
         autostart_launch_arg,
+        verbosity_launch_arg,
 
         set_autostart,
         set_acceleration,

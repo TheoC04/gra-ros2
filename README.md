@@ -157,3 +157,4 @@ event | specifies which track to spawn in based on the dynamic event |`accelerat
 autostart | starts the simulation automatically |`true`, `false`|`true`
 model_file | path to the vehicle model sdf file | Any valid path to vehicle sdf model |hard-coded path
 name | sets the vehicle name in Gazebo | Any valid string|`ads_dv`
+verbosity | sets the Gazebo console output verbosity | 0 - 4| `1`
