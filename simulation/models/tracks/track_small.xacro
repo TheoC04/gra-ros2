@@ -145,10 +145,10 @@
 
     <model name='big_orange_cones'>
       <static>true</static>
-      <xacro:cone name="orange_big_1" type="orange" pose="1.14507 3.03746 0.033 0 0 0"/>
-      <xacro:cone name="orange_big_2" type="orange" pose="-0.919189 2.98971 0.033 0 0 0"/>
-      <xacro:cone name="orange_big_3" type="orange" pose="1.04889 -3.01482 0.033 0 0 0"/>
-      <xacro:cone name="orange_big_4" type="orange" pose="-1.21717 -3.06412 0.033 0 0 0"/>
+      <xacro:cone name="orange_big_1" type="orange_big" pose="1.14507 3.03746 0.033 0 0 0"/>
+      <xacro:cone name="orange_big_2" type="orange_big" pose="-0.919189 2.98971 0.033 0 0 0"/>
+      <xacro:cone name="orange_big_3" type="orange_big" pose="1.04889 -3.01482 0.033 0 0 0"/>
+      <xacro:cone name="orange_big_4" type="orange_big" pose="-1.21717 -3.06412 0.033 0 0 0"/>
     </model>
 
   </world>
