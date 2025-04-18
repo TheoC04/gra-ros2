@@ -27,9 +27,9 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->declare_parameter<std::string>("yolo_result_topic", "yolo_result");
   this->declare_parameter<std::string>("yolo_3d_result_topic", "yolo_3d_result");
   this->declare_parameter<float>("cluster_tolerance", 0.1);
-  this->declare_parameter<float>("voxel_leaf_size", 0.0000001);
+  this->declare_parameter<float>("voxel_leaf_size", 0.07);
   this->declare_parameter<int>("min_cluster_size", 10);
-  this->declare_parameter<int>("max_cluster_size", 1000);
+  this->declare_parameter<int>("max_cluster_size", 700);
   this->declare_parameter<bool>("gz_camera_convention", true);
 
   this->get_parameter("camera_info_topic", camera_info_topic_);
@@ -341,7 +341,7 @@ void PredictWithCloudNode::removeGroundPlane(
   seg.setOptimizeCoefficients(true);
   seg.setModelType(pcl::SACMODEL_PLANE);
   seg.setMethodType(pcl::SAC_RANSAC);
-  seg.setMaxIterations(100);
+  seg.setMaxIterations(1000);
   seg.setDistanceThreshold(0.10); // Adjust based on your environment and add launch argument
 
   seg.setInputCloud(input_cloud);
