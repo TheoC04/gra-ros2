@@ -293,6 +293,7 @@ PredictWithCloudNode::downsampleCloudMsg(const sensor_msgs::msg::PointCloud2::Co
 {
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
   pcl::fromROSMsg(*cloud_msg, *cloud);
+  cloud->is_dense = false;
 
   this->get_parameter("voxel_leaf_size", voxel_leaf_size_);
   
