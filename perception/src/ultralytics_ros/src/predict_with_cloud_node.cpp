@@ -22,6 +22,7 @@
 PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
     : rclcpp::Node("predict_with_cloud_node", options)
 {
+  // Declare parameters
   this->declare_parameter<std::string>("camera_info_topic", "camera_info");
   this->declare_parameter<std::string>("lidar_topic", "points_raw");
   this->declare_parameter<std::string>("yolo_result_topic", "yolo_result");
@@ -33,6 +34,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->declare_parameter<float>("ransac_distance_threshold", 0.03);
   this->declare_parameter<bool>("gz_camera_convention", true);
 
+  // Store parameters as private members
   this->get_parameter("camera_info_topic", camera_info_topic_);
   this->get_parameter("lidar_topic", lidar_topic_);
   this->get_parameter("yolo_result_topic", yolo_result_topic_);
@@ -47,6 +49,8 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   camera_info_sub_.subscribe(this, camera_info_topic_);
   lidar_sub_.subscribe(this, lidar_topic_);
   yolo_result_sub_.subscribe(this, yolo_result_topic_);
+
+  // Set up synchronizer
   sync_ = std::make_shared<message_filters::Synchronizer<ApproximateSyncPolicy>>(1);
   sync_->connectInput(camera_info_sub_, lidar_sub_, yolo_result_sub_);
   sync_->registerCallback(std::bind(&PredictWithCloudNode::syncCallback, this, std::placeholders::_1,
@@ -56,6 +60,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   detection_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("detection_cloud", 1);
   marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("detection_marker", 1);
 
+  // Initialize time and TF listener
   last_call_time_ = this->now();
   tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
   tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
