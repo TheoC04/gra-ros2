@@ -19,7 +19,8 @@
 
 #include "predict_with_cloud_node/predict_with_cloud_node.h"
 
-PredictWithCloudNode::PredictWithCloudNode() : rclcpp::Node("predict_with_cloud_node")
+PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
+    : rclcpp::Node("predict_with_cloud_node", options)
 {
   this->declare_parameter<std::string>("camera_info_topic", "camera_info");
   this->declare_parameter<std::string>("lidar_topic", "points_raw");
@@ -459,7 +460,14 @@ PredictWithCloudNode::createMarkerArray(const vision_msgs::msg::Detection3DArray
 int main(int argc, char* argv[])
 {
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<PredictWithCloudNode>();
+
+  std::string package_share_dir = ament_index_cpp::get_package_share_directory("ultralytics_ros");
+  std::string param_file = package_share_dir + "/config/predict_with_cloud_node.yaml";
+
+  rclcpp::NodeOptions options;
+  options.arguments({"--ros-args", "--params-file", param_file});
+
+  auto node = std::make_shared<PredictWithCloudNode>(options);
   rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;

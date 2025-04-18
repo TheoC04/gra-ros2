@@ -58,6 +58,8 @@
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/ModelCoefficients.h>
 
+#include <ament_index_cpp/get_package_share_directory.hpp>
+
 typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::CameraInfo, sensor_msgs::msg::PointCloud2,
                                                         ultralytics_ros::msg::YoloResult>
     ApproximateSyncPolicy;
@@ -86,7 +88,7 @@ private:
   int max_cluster_size_;
 
 public:
-  PredictWithCloudNode();
+  PredictWithCloudNode(const rclcpp::NodeOptions & options);
   void syncCallback(const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info_msg,
                     const sensor_msgs::msg::PointCloud2::ConstSharedPtr& cloud_msg,
                     const ultralytics_ros::msg::YoloResult::ConstSharedPtr& yolo_result_msg);
