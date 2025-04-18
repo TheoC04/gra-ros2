@@ -36,6 +36,11 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->get_parameter("camera_info_topic", camera_info_topic_);
   this->get_parameter("lidar_topic", lidar_topic_);
   this->get_parameter("yolo_result_topic", yolo_result_topic_);
+  this->get_parameter("yolo_3d_result_topic", yolo_3d_result_topic_);
+  this->get_parameter("cluster_tolerance", cluster_tolerance_);
+  this->get_parameter("voxel_leaf_size", voxel_leaf_size_);
+  this->get_parameter("min_cluster_size", min_cluster_size_);
+  this->get_parameter("max_cluster_size", max_cluster_size_);
   this->get_parameter("ransac_distance_threshold", ransac_distance_threshold_);
   this->get_parameter("gz_camera_convention", gz_camera_convention_);
 
@@ -47,7 +52,6 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   sync_->registerCallback(std::bind(&PredictWithCloudNode::syncCallback, this, std::placeholders::_1,
                                     std::placeholders::_2, std::placeholders::_3));
 
-  this->get_parameter("yolo_3d_result_topic", yolo_3d_result_topic_);
   detection3d_pub_ = this->create_publisher<vision_msgs::msg::Detection3DArray>(yolo_3d_result_topic_, 1);
   detection_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("detection_cloud", 1);
   marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("detection_marker", 1);
@@ -310,8 +314,6 @@ PredictWithCloudNode::downsampleCloudMsg(const sensor_msgs::msg::PointCloud2::Co
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
   pcl::fromROSMsg(*cloud_msg, *cloud);
   cloud->is_dense = false;
-
-  this->get_parameter("voxel_leaf_size", voxel_leaf_size_);
   
   // Step 1: Downsampling
   pcl::PointCloud<pcl::PointXYZ>::Ptr downsampled_cloud(new pcl::PointCloud<pcl::PointXYZ>());
@@ -394,9 +396,6 @@ PredictWithCloudNode::cloud2TransformedCloud(const pcl::PointCloud<pcl::PointXYZ
 pcl::PointCloud<pcl::PointXYZ>::Ptr
 PredictWithCloudNode::euclideanClusterExtraction(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud)
 {
-  this->get_parameter("cluster_tolerance", cluster_tolerance_);
-  this->get_parameter("min_cluster_size", min_cluster_size_);
-  this->get_parameter("max_cluster_size", max_cluster_size_);
   pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>());
   std::vector<pcl::PointIndices> cluster_indices;
   pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
