@@ -9,4 +9,5 @@ predict_with_cloud_node:
     voxel_leaf_size: 0.07
     min_cluster_size: 10
     max_cluster_size: 700
+    ransac_distance_threshold: 0.03
     gz_camera_convention: true

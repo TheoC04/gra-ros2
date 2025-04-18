@@ -30,11 +30,13 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->declare_parameter<float>("voxel_leaf_size", 0.07);
   this->declare_parameter<int>("min_cluster_size", 10);
   this->declare_parameter<int>("max_cluster_size", 700);
+  this->declare_parameter<float>("ransac_distance_threshold", 0.03);
   this->declare_parameter<bool>("gz_camera_convention", true);
 
   this->get_parameter("camera_info_topic", camera_info_topic_);
   this->get_parameter("lidar_topic", lidar_topic_);
   this->get_parameter("yolo_result_topic", yolo_result_topic_);
+  this->get_parameter("ransac_distance_threshold", ransac_distance_threshold_);
   this->get_parameter("gz_camera_convention", gz_camera_convention_);
 
   camera_info_sub_.subscribe(this, camera_info_topic_);
@@ -342,7 +344,7 @@ void PredictWithCloudNode::removeGroundPlane(
   seg.setModelType(pcl::SACMODEL_PLANE);
   seg.setMethodType(pcl::SAC_RANSAC);
   seg.setMaxIterations(1000);
-  seg.setDistanceThreshold(0.10); // Adjust based on your environment and add launch argument
+  seg.setDistanceThreshold(ransac_distance_threshold_);
 
   seg.setInputCloud(input_cloud);
   seg.segment(*inliers, *coefficients);
