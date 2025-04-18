@@ -59,6 +59,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   detection3d_pub_ = this->create_publisher<vision_msgs::msg::Detection3DArray>(yolo_3d_result_topic_, 1);
   detection_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("detection_cloud", 1);
   marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("detection_marker", 1);
+  filtered_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("filtered_cloud", 1);
 
   // Initialize time and TF listener
   last_call_time_ = this->now();
@@ -93,6 +94,13 @@ void PredictWithCloudNode::syncCallback(const sensor_msgs::msg::CameraInfo::Cons
   pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
   removeGroundPlane(downsampled_cloud, filtered_cloud);
   RCLCPP_INFO(this->get_logger(), "Filtered cloud size after ground removal: %zu", filtered_cloud->points.size());
+
+  // Publish the filtered cloud
+  sensor_msgs::msg::PointCloud2 filtered_cloud_msg;
+  pcl::toROSMsg(*filtered_cloud, filtered_cloud_msg);
+  filtered_cloud_msg.header = cloud_msg->header;
+  filtered_cloud_pub_->publish(filtered_cloud_msg);
+  RCLCPP_INFO(this->get_logger(), "Published filtered cloud with %zu points", filtered_cloud->points.size());
 
   // Update camera model
   cam_model_.fromCameraInfo(camera_info_msg);

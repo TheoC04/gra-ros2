@@ -71,6 +71,7 @@ private:
   rclcpp::Publisher<vision_msgs::msg::Detection3DArray>::SharedPtr detection3d_pub_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr detection_cloud_pub_;
   rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_cloud_pub_;
   image_geometry::PinholeCameraModel cam_model_;
   message_filters::Subscriber<sensor_msgs::msg::CameraInfo> camera_info_sub_;
   message_filters::Subscriber<sensor_msgs::msg::PointCloud2> lidar_sub_;
