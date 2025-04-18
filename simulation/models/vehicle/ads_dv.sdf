@@ -112,7 +112,7 @@
         <topic>zed2i/depth_camera</topic>
         <camera>
           <camera_info_topic>camera_info</camera_info_topic>
-          <horizontal_fov>1.9198622000000001</horizontal_fov>
+          <horizontal_fov>1.22173</horizontal_fov>
           <image>
             <width>640</width>
             <height>480</height>
