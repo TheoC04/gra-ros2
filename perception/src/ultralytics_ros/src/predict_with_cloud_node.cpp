@@ -75,16 +75,26 @@ void PredictWithCloudNode::syncCallback(const sensor_msgs::msg::CameraInfo::Cons
   RCLCPP_INFO(this->get_logger(), "syncCallback triggered at time: %.2f, interval: %.2f seconds",
                current_call_time.seconds(), callback_interval.seconds());
 
-  // Downsample the point cloud and log the size
-  pcl::PointCloud<pcl::PointXYZ>::Ptr downsampled_cloud = downsampleCloudMsg(cloud_msg);
+  // Convert the input cloud to PCL format
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
+  pcl::fromROSMsg(*cloud_msg, *cloud);
+
+  // Downsample the point cloud
+  pcl::PointCloud<pcl::PointXYZ>::Ptr downsampled_cloud = downsampleCloudMsg(
+      std::make_shared<sensor_msgs::msg::PointCloud2>(*cloud_msg));
   RCLCPP_INFO(this->get_logger(), "Downsampled cloud size: %zu", downsampled_cloud->points.size());
+
+  // Remove ground plane after downsampling
+  pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
+  removeGroundPlane(downsampled_cloud, filtered_cloud);
+  RCLCPP_INFO(this->get_logger(), "Filtered cloud size after ground removal: %zu", filtered_cloud->points.size());
 
   // Update camera model
   cam_model_.fromCameraInfo(camera_info_msg);
   RCLCPP_INFO(this->get_logger(), "Camera model updated.");
 
   // Transform point cloud from sensor frame to camera frame
-  pcl::PointCloud<pcl::PointXYZ>::Ptr transformed_cloud = cloud2TransformedCloud(downsampled_cloud,
+  pcl::PointCloud<pcl::PointXYZ>::Ptr transformed_cloud = cloud2TransformedCloud(filtered_cloud,
                                                                                   cloud_msg->header.frame_id,
                                                                                   cam_model_.tfFrame(),
                                                                                   cloud_msg->header.stamp);
@@ -322,14 +332,10 @@ PredictWithCloudNode::downsampleCloudMsg(const sensor_msgs::msg::PointCloud2::Co
   voxel_grid.setLeafSize(voxel_leaf_size_, voxel_leaf_size_, voxel_leaf_size_);
   voxel_grid.filter(*downsampled_cloud);
 
-  // Step 2: Ground Plane Removal
-  pcl::PointCloud<pcl::PointXYZ>::Ptr non_ground_cloud(new pcl::PointCloud<pcl::PointXYZ>());
-  removeGroundPlane(downsampled_cloud, non_ground_cloud);
+  RCLCPP_INFO(this->get_logger(), "Downsampled cloud: original %zu points, filtered to %zu points",
+              cloud->points.size(), downsampled_cloud->points.size());
 
-  RCLCPP_INFO(this->get_logger(), "Downsampled cloud: original %zu points, filtered to %zu points (no ground)",
-              cloud->points.size(), non_ground_cloud->points.size());
-
-  return non_ground_cloud;
+  return downsampled_cloud;
 }
 
 
