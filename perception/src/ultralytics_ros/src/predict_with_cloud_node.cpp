@@ -30,10 +30,13 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->declare_parameter<float>("voxel_leaf_size", 0.0000001);
   this->declare_parameter<int>("min_cluster_size", 10);
   this->declare_parameter<int>("max_cluster_size", 1000);
+  this->declare_parameter<bool>("gz_camera_convention", true);
 
   this->get_parameter("camera_info_topic", camera_info_topic_);
   this->get_parameter("lidar_topic", lidar_topic_);
   this->get_parameter("yolo_result_topic", yolo_result_topic_);
+  this->get_parameter("gz_camera_convention", gz_camera_convention_);
+
   camera_info_sub_.subscribe(this, camera_info_topic_);
   lidar_sub_.subscribe(this, lidar_topic_);
   yolo_result_sub_.subscribe(this, yolo_result_topic_);
@@ -51,7 +54,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
   tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
-  RCLCPP_INFO(this->get_logger(), "PredictWithCloudNode started with +X forward assumption.");
+  RCLCPP_INFO(this->get_logger(), "PredictWithCloudNode started.");
 }
 
 void PredictWithCloudNode::syncCallback(const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info_msg,
@@ -74,7 +77,7 @@ void PredictWithCloudNode::syncCallback(const sensor_msgs::msg::CameraInfo::Cons
   cam_model_.fromCameraInfo(camera_info_msg);
   RCLCPP_INFO(this->get_logger(), "Camera model updated.");
 
-  // Transform point cloud from sensor frame to camera frame (+X forward)
+  // Transform point cloud from sensor frame to camera frame
   pcl::PointCloud<pcl::PointXYZ>::Ptr transformed_cloud = cloud2TransformedCloud(downsampled_cloud,
                                                                                   cloud_msg->header.frame_id,
                                                                                   cam_model_.tfFrame(),
@@ -183,11 +186,21 @@ void PredictWithCloudNode::processPointsWithBbox(const pcl::PointCloud<pcl::Poin
 {
   for (const auto& point : cloud->points)
   {
-    // First, convert from sensor frame (with +X forward) to pseudo-optical frame
-    // Optical frame (ROS): X right, Y down, Z forward.
-    // Transformation: p_optical = (-point.z, point.y, point.x)
-    cv::Point3d optical_pt(-point.y, -point.z, point.x);
-    
+    cv::Point3d optical_pt;
+    if (gz_camera_convention_)
+    {
+      // Gazebo simulation convention
+      // First, convert from sensor frame (with +X forward) to pseudo-optical frame
+      // Optical frame (ROS): X right, Y down, Z forward.
+      // Transformation: p_optical = (-point.z, point.y, point.x)
+      optical_pt = cv::Point3d(-point.y, -point.z, point.x);
+    }
+    else
+    {
+      // Real-world ROS camera standard convention
+      optical_pt = cv::Point3d(point.x, point.y, point.z);
+    }
+
     // Now use the existing projection function which expects optical frame points.
     cv::Point2d uv = cam_model_.project3dToPixel(optical_pt);
 
