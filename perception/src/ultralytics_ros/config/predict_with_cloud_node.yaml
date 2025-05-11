@@ -3,8 +3,8 @@ predict_with_cloud_node:
     use_sim_time: True
     camera_info_topic: "/zed2i/depth_camera/camera_info"
     lidar_topic: "/zed2i/depth_camera/points"
-    yolo_result_topic: "yolo_result"
-    yolo_3d_result_topic: "yolo_3d_result"
+    yolo_result_topic: "/yolo_result"
+    yolo_3d_result_topic: "/yolo_3d_result"
     cluster_tolerance: 0.1
     voxel_leaf_size: 0.07
     min_cluster_size: 10
