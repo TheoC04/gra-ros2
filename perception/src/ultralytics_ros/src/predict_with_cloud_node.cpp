@@ -51,7 +51,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   yolo_result_sub_.subscribe(this, yolo_result_topic_);
 
   // Set up synchronizer
-  sync_ = std::make_shared<message_filters::Synchronizer<ApproximateSyncPolicy>>(1);
+  sync_ = std::make_shared<message_filters::Synchronizer<ApproximateSyncPolicy>>(10);
   sync_->connectInput(camera_info_sub_, lidar_sub_, yolo_result_sub_);
   sync_->registerCallback(std::bind(&PredictWithCloudNode::syncCallback, this, std::placeholders::_1,
                                     std::placeholders::_2, std::placeholders::_3));
