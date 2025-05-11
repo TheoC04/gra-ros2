@@ -20,6 +20,8 @@
 #pragma once
 
 #include <rclcpp/rclcpp.hpp>
+#include <common_msgs/msg/cone.hpp>
+#include <common_msgs/msg/cone_array.hpp>
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <sensor_msgs/msg/camera_info.hpp>
 #include <sensor_msgs/msg/image.hpp>
@@ -72,6 +74,7 @@ private:
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr detection_cloud_pub_;
   rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr filtered_cloud_pub_;
+  rclcpp::Publisher<common_msgs::msg::ConeArray>::SharedPtr cone_array_pub_;
   image_geometry::PinholeCameraModel cam_model_;
   message_filters::Subscriber<sensor_msgs::msg::CameraInfo> camera_info_sub_;
   message_filters::Subscriber<sensor_msgs::msg::PointCloud2> lidar_sub_;

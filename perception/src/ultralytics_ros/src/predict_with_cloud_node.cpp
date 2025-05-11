@@ -60,6 +60,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   detection_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("detection_cloud", 1);
   marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("detection_marker", 1);
   filtered_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("filtered_cloud", 1);
+  cone_array_pub_ = this->create_publisher<common_msgs::msg::ConeArray>("cone_array", 1);
 
   // Initialize time and TF listener
   last_call_time_ = this->now();
@@ -163,6 +164,9 @@ void PredictWithCloudNode::projectCloud(const pcl::PointCloud<pcl::PointXYZ>::Pt
   detection3d_array_msg.header = header;
   detection3d_array_msg.header.stamp = yolo_result_msg->header.stamp;
 
+  common_msgs::msg::ConeArray cone_array_msg;
+  cone_array_msg.header = header;
+
   RCLCPP_INFO(this->get_logger(), "Processing %zu 2D detections for projection.", yolo_result_msg->detections.detections.size());
 
   for (size_t i = 0; i < yolo_result_msg->detections.detections.size(); i++)
@@ -197,6 +201,12 @@ void PredictWithCloudNode::projectCloud(const pcl::PointCloud<pcl::PointXYZ>::Pt
       // Create the 3D bounding box
       createBoundingBox(detection3d_array_msg, closest_detection_cloud,
                         yolo_result_msg->detections.detections[i].results);
+
+      // Add cone to ConeArray
+      common_msgs::msg::Cone cone_msg;
+      cone_msg.type = yolo_result_msg->detections.detections[i].results[0].hypothesis.class_id; // Set type from YOLO class
+      cone_msg.pose = detection3d_array_msg.detections.back().bbox.center;    // Set pose from bounding box center
+      cone_array_msg.cones.push_back(cone_msg);
     }
     else
     {
@@ -207,6 +217,9 @@ void PredictWithCloudNode::projectCloud(const pcl::PointCloud<pcl::PointXYZ>::Pt
   pcl::toROSMsg(*combine_detection_cloud, combine_detection_cloud_msg);
   combine_detection_cloud_msg.header = header;
   RCLCPP_INFO(this->get_logger(), "Combined detection cloud size: %zu", combine_detection_cloud->points.size());
+
+  // Publish the ConeArray
+  cone_array_pub_->publish(cone_array_msg);
 }
 
 void PredictWithCloudNode::processPointsWithBbox(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud,

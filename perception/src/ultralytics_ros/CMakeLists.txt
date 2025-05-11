@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(common_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -40,6 +41,7 @@ include_directories(include)
 add_executable(predict_with_cloud_node src/predict_with_cloud_node.cpp)
 ament_target_dependencies(predict_with_cloud_node
   rclcpp
+  common_msgs
   geometry_msgs
   sensor_msgs
   std_msgs
