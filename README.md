@@ -148,8 +148,6 @@ ros2 launch simulation dynamic_event.launch.py autostart:=true
 This should launch Gazebo Sim, with the acceleration track and ADS-DV vehicle model spawned in.
 ![Example](https://github.com/user-attachments/assets/99254e31-ed0a-49ae-9bee-ec22e6a2810f)
 
-## Launch Arguments
-
 The following launch arguments are provided for `dynamic_event.launch.py`
   | Argument |Description| Options | Default
 --|--|--|--|
@@ -158,3 +156,20 @@ autostart | starts the simulation automatically |`true`, `false`|`true`
 model_file | path to the vehicle model sdf file | Any valid path to vehicle sdf model |hard-coded path
 name | sets the vehicle name in Gazebo | Any valid string|`ads_dv`
 verbosity | sets the Gazebo console output verbosity | 0 - 4| `1`
+
+## Launch Perception
+
+To launch the perception nodes, use the following command
+
+```bash
+ros2 launch simulation predict_with_cloud_node.xml use_sim_time:=true yolo_model:=conev11n.pt input_topic:=/zed2i/depth_camera/image lidar_topic:=/velodyne/points
+```
+
+| Argument |Description| Options | Default
+|--|--|--|--|
+| use_sim_time | uses simulation time published to /clock | `true`, `false` | `true`  |
+| yolo_model | sets the model for inference | `conev11n.pt`, `conev8n.pt`, `conev8n_40.pt` | `conev11n.pt` |
+| input_topic | sets camera input topic | any valid camera video topic | `/image_raw`  |
+| lidar_topic | sets lidar input topic | any valid lidar pointcloud topic | `/points_raw`  |
+
+
