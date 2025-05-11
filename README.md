@@ -162,7 +162,7 @@ verbosity | sets the Gazebo console output verbosity | 0 - 4| `1`
 To launch the perception nodes, use the following command
 
 ```bash
-ros2 launch simulation predict_with_cloud_node.xml use_sim_time:=true yolo_model:=conev11n.pt input_topic:=/zed2i/depth_camera/image lidar_topic:=/velodyne/points
+ros2 launch ultralytics_ros predict_with_cloud.launch.xml use_sim_time:=true yolo_model:=conev11n.pt input_topic:=/zed2i/depth_camera/image
 ```
 
 | Argument |Description| Options | Default
@@ -170,6 +170,6 @@ ros2 launch simulation predict_with_cloud_node.xml use_sim_time:=true yolo_model
 | use_sim_time | uses simulation time published to /clock | `true`, `false` | `true`  |
 | yolo_model | sets the model for inference | `conev11n.pt`, `conev8n.pt`, `conev8n_40.pt` | `conev11n.pt` |
 | input_topic | sets camera input topic | any valid camera video topic | `/image_raw`  |
-| lidar_topic | sets lidar input topic | any valid lidar pointcloud topic | `/points_raw`  |
 
+All parameters for the 3D perception node `predict_with_cloud_node` are specified in `config/predict_with_cloud_node.yaml`
 
