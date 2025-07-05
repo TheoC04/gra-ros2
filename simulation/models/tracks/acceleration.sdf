@@ -1802,12 +1802,12 @@
         <publish_model_pose>true</publish_model_pose>
         <publish_nested_model_pose>true</publish_nested_model_pose>
       </plugin>
-      <link name="orange_big_1">
+      <link name="large_orange_1">
         <pose>-50 1.5 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -1846,12 +1846,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_2">
+      <link name="large_orange_2">
         <pose>-50 -1.5 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -1890,12 +1890,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_3">
+      <link name="large_orange_3">
         <pose>-50.5 1.5 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -1934,12 +1934,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_4">
+      <link name="large_orange_4">
         <pose>-50.5 -1.5 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -1978,12 +1978,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_5">
+      <link name="large_orange_5">
         <pose>25 1.5 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -2022,12 +2022,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_6">
+      <link name="large_orange_6">
         <pose>25 -1.5 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>

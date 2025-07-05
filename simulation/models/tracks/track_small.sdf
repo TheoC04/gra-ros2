@@ -2946,12 +2946,12 @@
     </model>
     <model name="big_orange_cones">
       <static>true</static>
-      <link name="orange_big_1">
+      <link name="large_orange_1">
         <pose>1.14507 3.03746 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -2990,12 +2990,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_2">
+      <link name="large_orange_2">
         <pose>-0.919189 2.98971 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -3034,12 +3034,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_3">
+      <link name="large_orange_3">
         <pose>1.04889 -3.01482 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -3078,12 +3078,12 @@
           </inertia>
         </inertial>
       </link>
-      <link name="orange_big_4">
+      <link name="large_orange_4">
         <pose>-1.21717 -3.06412 0.033 0 0 0</pose>
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://simulation/models/cones/cone_orange_big/mesh.dae</uri>
+              <uri>model://simulation/models/cones/cone_large_orange/mesh.dae</uri>
             </mesh>
           </geometry>
         </visual>
