@@ -655,7 +655,7 @@
       <max_velocity>30.0</max_velocity>
       <min_acceleration>-5.2</min_acceleration>
       <max_acceleration>5.2</max_acceleration>
-      <frame_id>ads_dv</frame_id>
+      <frame_id>odom</frame_id>
       <child_frame_id>base_link</child_frame_id>
     </plugin>
     <plugin name='gz::sim::systems::LogicalCamera' filename='gz-sim-logical-camera-system'>
