@@ -18,6 +18,7 @@
  */
 
 #include "predict_with_cloud_node/predict_with_cloud_node.h"
+#include <unordered_map>
 
 PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
     : rclcpp::Node("predict_with_cloud_node", options)
@@ -165,6 +166,14 @@ void PredictWithCloudNode::projectCloud(const pcl::PointCloud<pcl::PointXYZ>::Pt
                                         vision_msgs::msg::Detection3DArray& detection3d_array_msg,
                                         sensor_msgs::msg::PointCloud2& combine_detection_cloud_msg)
 {
+  // Map from string class_id to uint8 Cone type
+  static const std::unordered_map<std::string, uint8_t> class_map = {
+    {"UNKNOWN", 0},
+    {"YELLOW", 1},
+    {"BLUE", 2},
+    {"ORANGE", 3},
+    {"LARGE_ORANGE", 4}
+  };
   pcl::PointCloud<pcl::PointXYZ>::Ptr combine_detection_cloud(new pcl::PointCloud<pcl::PointXYZ>());
   detection3d_array_msg.header = header;
   detection3d_array_msg.header.stamp = yolo_result_msg->header.stamp;
@@ -209,9 +218,21 @@ void PredictWithCloudNode::projectCloud(const pcl::PointCloud<pcl::PointXYZ>::Pt
 
       // Add cone to ConeArray
       common_msgs::msg::Cone cone_msg;
-      cone_msg.type = yolo_result_msg->detections.detections[i].results[0].hypothesis.class_id; // Set type from YOLO class
-      cone_msg.pose = detection3d_array_msg.detections.back().bbox.center;    // Set pose from bounding box center
-      cone_array_msg.cones.push_back(cone_msg);
+      std::string class_id_str = yolo_result_msg->detections.detections[i].results[0].hypothesis.class_id;
+      auto it = class_map.find(class_id_str);
+      cone_msg.type = (it != class_map.end()) ? it->second : 0; // Default to UNKNOWN if not found
+      cone_msg.position.x = detection3d_array_msg.detections.back().bbox.center.position.x;
+      cone_msg.position.y = detection3d_array_msg.detections.back().bbox.center.position.y;
+      cone_msg.position.z = detection3d_array_msg.detections.back().bbox.center.position.z;
+      // Place cone in the correct array
+      switch (cone_msg.type) {
+        case 1: cone_array_msg.yellow_cones.push_back(cone_msg); break;
+        case 2: cone_array_msg.blue_cones.push_back(cone_msg); break;
+        case 3: cone_array_msg.orange_cones.push_back(cone_msg); break;
+        case 4: cone_array_msg.large_orange_cones.push_back(cone_msg); break;
+        case 0:
+        default: cone_array_msg.unknown_cones.push_back(cone_msg); break;
+      }
     }
     else
     {

@@ -107,6 +107,15 @@ class PredictNode(Node):
         bounding_box = results[0].boxes.xywh
         classes = results[0].boxes.cls
         confidence_score = results[0].boxes.conf
+        # Mapping from YOLO class name to capitalized class_id string
+        class_map = {
+            "unknown": "UNKNOWN",
+            "yellow_cone": "YELLOW",
+            "blue_cone": "BLUE",
+            "orange_cone": "ORANGE",
+            "large_orange_cone": "LARGE_ORANGE"
+        }
+        names = results[0].names  # YOLO class index to name mapping
         for bbox, cls, conf in zip(bounding_box, classes, confidence_score):
             detection = Detection2D()
             detection.bbox.center.position.x = float(bbox[0])
@@ -114,7 +123,8 @@ class PredictNode(Node):
             detection.bbox.size_x = float(bbox[2])
             detection.bbox.size_y = float(bbox[3])
             hypothesis = ObjectHypothesisWithPose()
-            hypothesis.hypothesis.class_id = results[0].names.get(int(cls))
+            class_name = names.get(int(cls), "unknown")
+            hypothesis.hypothesis.class_id = class_map.get(class_name, "UNKNOWN")
             hypothesis.hypothesis.score = float(conf)
             detection.results.append(hypothesis)
             detections_msg.detections.append(detection)
