@@ -112,7 +112,7 @@ void PredictWithCloudNode::syncCallback(const sensor_msgs::msg::CameraInfo::Cons
   cam_model_.fromCameraInfo(camera_info_msg);
   RCLCPP_INFO(this->get_logger(), "Camera model updated.");
 
-  // Transform point cloud from sensor frame to camera frame
+  // Transform point cloud in camera frame to optical frame
   pcl::PointCloud<pcl::PointXYZ>::Ptr transformed_cloud = cloud2TransformedCloud(filtered_cloud,
                                                                                   cloud_msg->header.frame_id,
                                                                                   cam_model_.tfFrame(),
@@ -262,7 +262,11 @@ void PredictWithCloudNode::processPointsWithBbox(const pcl::PointCloud<pcl::Poin
 
     // Check that the original point is in front of the sensor (x > 0)
     // and that the projected pixel falls within the detection's bounding box.
-    if (point.x > 0 &&
+    auto forward = point.z;
+    if(gz_camera_convention_) {
+      forward = point.x;
+    }
+    if (forward > 0 &&
         uv.x > 0 &&
         uv.x >= detection2d_msg.bbox.center.position.x - detection2d_msg.bbox.size_x / 2 &&
         uv.x <= detection2d_msg.bbox.center.position.x + detection2d_msg.bbox.size_x / 2 &&
@@ -298,7 +302,11 @@ void PredictWithCloudNode::processPointsWithMask(const pcl::PointCloud<pcl::Poin
     cv::Point2d uv = cam_model_.project3dToPixel(pt_cv);
 
     // Only consider valid uv coordinates that fall within the image dimensions
-    if (point.x > 0 && uv.x >= 0 && uv.x < cv_ptr->image.cols && uv.y >= 0 && uv.y < cv_ptr->image.rows)
+    auto forward = point.z;
+    if(gz_camera_convention_) {
+      forward = point.x;
+    }
+    if (forward > 0 && uv.x >= 0 && uv.x < cv_ptr->image.cols && uv.y >= 0 && uv.y < cv_ptr->image.rows)
     {
       if (cv_ptr->image.at<uchar>(cv::Point(uv.x, uv.y)) > 0)
       {
