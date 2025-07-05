@@ -268,7 +268,7 @@ def generate_launch_description():
             "--pitch", LaunchConfiguration('P'),
             "--yaw", LaunchConfiguration('Y'),
             "--frame-id", LaunchConfiguration('world'),
-            "--child-frame-id", "ads_dv"
+            "--child-frame-id", "odom"
         ]
     )
 
