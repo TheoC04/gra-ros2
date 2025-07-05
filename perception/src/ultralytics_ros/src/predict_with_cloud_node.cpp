@@ -86,12 +86,17 @@ void PredictWithCloudNode::syncCallback(const sensor_msgs::msg::CameraInfo::Cons
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
   pcl::fromROSMsg(*cloud_msg, *cloud);
 
+  // Remove points above the horizontal (definitely not cone points!)
+  // convert to camera frame
+  // using that assumption, remove all points above the up direction of the optical frame
+  // (gz: +z, real: -y) or maybe a small positive threshold
+
   // Downsample the point cloud
   pcl::PointCloud<pcl::PointXYZ>::Ptr downsampled_cloud = downsampleCloudMsg(
       std::make_shared<sensor_msgs::msg::PointCloud2>(*cloud_msg));
   RCLCPP_INFO(this->get_logger(), "Downsampled cloud size: %zu", downsampled_cloud->points.size());
 
-  // Remove ground plane after downsampling
+  // Remove ground plane after downsampling && FOV clipping
   pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
   removeGroundPlane(downsampled_cloud, filtered_cloud);
   RCLCPP_INFO(this->get_logger(), "Filtered cloud size after ground removal: %zu", filtered_cloud->points.size());
@@ -350,11 +355,24 @@ PredictWithCloudNode::downsampleCloudMsg(const sensor_msgs::msg::PointCloud2::Co
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
   pcl::fromROSMsg(*cloud_msg, *cloud);
   cloud->is_dense = false;
+
+  // Step 0: FOV clipping
+  pcl::PointCloud<pcl::PointXYZ>::Ptr clipped_cloud(new pcl::PointCloud<pcl::PointXYZ>());
+  pcl::PassThrough<pcl::PointXYZ> pass;
+  pass.setInputCloud(cloud);
+  if(gz_camera_convention_) {
+    pass.setFilterFieldName ("z"); // ASSUMING WE ARE IN THE CAMERA (NOT OPTICAL) FRAME
+    pass.setFilterLimits (-999.99, 0.0);
+  } else {
+    pass.setFilterFieldName ("z");
+    pass.setFilterLimits (-999.99, 0.0);
+  }
+  pass.filter(*clipped_cloud);
   
   // Step 1: Downsampling
   pcl::PointCloud<pcl::PointXYZ>::Ptr downsampled_cloud(new pcl::PointCloud<pcl::PointXYZ>());
   pcl::VoxelGrid<pcl::PointXYZ> voxel_grid;
-  voxel_grid.setInputCloud(cloud);
+  voxel_grid.setInputCloud(clipped_cloud);
   voxel_grid.setLeafSize(voxel_leaf_size_, voxel_leaf_size_, voxel_leaf_size_);
   voxel_grid.filter(*downsampled_cloud);
 

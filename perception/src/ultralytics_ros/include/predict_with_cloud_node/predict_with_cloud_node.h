@@ -49,6 +49,7 @@
 #include <pcl/common/common.h>
 #include <pcl/common/centroid.h>
 #include <pcl/filters/voxel_grid.h>
+#include <pcl/filters/passthrough.h>
 #include <pcl/point_types.h>
 #include <pcl/point_cloud.h>
 #include <pcl/search/kdtree.h>
