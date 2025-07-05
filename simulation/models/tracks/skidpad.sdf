@@ -96,6 +96,7 @@
       <model name="blue_1">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 0 0.15 0 0 0</pose>
@@ -144,6 +145,7 @@
       <model name="blue_2">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-2.216 2.9131 0.15 0 0 0</pose>
@@ -192,6 +194,7 @@
       <model name="blue_3">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-3.867 5.3828 0.15 0 0 0</pose>
@@ -240,6 +243,7 @@
       <model name="blue_4">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-6.336 7.033 0.15 0 0 0</pose>
@@ -288,6 +292,7 @@
       <model name="blue_5">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-9.25 7.6125 0.15 0 0 0</pose>
@@ -336,6 +341,7 @@
       <model name="blue_6">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-12.16 7.033 0.15 0 0 0</pose>
@@ -384,6 +390,7 @@
       <model name="blue_7">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-14.63 5.3828 0.15 0 0 0</pose>
@@ -432,6 +439,7 @@
       <model name="blue_8">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-16.28 2.9131 0.15 0 0 0</pose>
@@ -480,6 +488,7 @@
       <model name="blue_9">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-16.86 0 0.15 0 0 0</pose>
@@ -528,6 +537,7 @@
       <model name="blue_10">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-16.28 -2.913 0.15 0 0 0</pose>
@@ -576,6 +586,7 @@
       <model name="blue_11">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-14.63 -5.382 0.15 0 0 0</pose>
@@ -624,6 +635,7 @@
       <model name="blue_12">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-12.16 -7.033 0.15 0 0 0</pose>
@@ -672,6 +684,7 @@
       <model name="blue_13">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-9.25 -7.612 0.15 0 0 0</pose>
@@ -720,6 +733,7 @@
       <model name="blue_14">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-6.336 -7.033 0.15 0 0 0</pose>
@@ -768,6 +782,7 @@
       <model name="blue_15">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-3.867 -5.382 0.15 0 0 0</pose>
@@ -816,6 +831,7 @@
       <model name="blue_16">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-2.2169 -2.913 0.15 0 0 0</pose>
@@ -864,6 +880,7 @@
       <model name="blue_17">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>19.862 0 0.15 0 0 0</pose>
@@ -912,6 +929,7 @@
       <model name="blue_18">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>19.054 4.0612 0.15 0 0 0</pose>
@@ -960,6 +978,7 @@
       <model name="blue_19">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>16.754 7.5041 0.15 0 0 0</pose>
@@ -1008,6 +1027,7 @@
       <model name="blue_20">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>13.311 9.8046 0.15 0 0 0</pose>
@@ -1056,6 +1076,7 @@
       <model name="blue_21">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>9.25 10.612 0.15 0 0 0</pose>
@@ -1104,6 +1125,7 @@
       <model name="blue_22">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>5.1887 9.8046 0.15 0 0 0</pose>
@@ -1152,6 +1174,7 @@
       <model name="blue_23">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.7458 7.5041 0.15 0 0 0</pose>
@@ -1200,6 +1223,7 @@
       <model name="blue_24">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.7458 -7.504 0.15 0 0 0</pose>
@@ -1248,6 +1272,7 @@
       <model name="blue_25">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>5.1887 -9.804 0.15 0 0 0</pose>
@@ -1296,6 +1321,7 @@
       <model name="blue_26">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>9.25 -10.61 0.15 0 0 0</pose>
@@ -1344,6 +1370,7 @@
       <model name="blue_27">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>13.311 -9.804 0.15 0 0 0</pose>
@@ -1392,6 +1419,7 @@
       <model name="blue_28">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>16.754 -7.504 0.15 0 0 0</pose>
@@ -1440,6 +1468,7 @@
       <model name="blue_29">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>19.054 -4.061 0.15 0 0 0</pose>
@@ -1491,6 +1520,7 @@
       <model name="yellow_1">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>16.862 0 0.15 0 0 0</pose>
@@ -1539,6 +1569,7 @@
       <model name="yellow_2">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>16.283 2.9131 0.15 0 0 0</pose>
@@ -1587,6 +1618,7 @@
       <model name="yellow_3">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>14.632 5.3828 0.15 0 0 0</pose>
@@ -1635,6 +1667,7 @@
       <model name="yellow_4">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>12.163 7.033 0.15 0 0 0</pose>
@@ -1683,6 +1716,7 @@
       <model name="yellow_5">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>9.25 7.6125 0.15 0 0 0</pose>
@@ -1731,6 +1765,7 @@
       <model name="yellow_6">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>6.3368 7.033 0.15 0 0 0</pose>
@@ -1779,6 +1814,7 @@
       <model name="yellow_7">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>3.8671 5.3828 0.15 0 0 0</pose>
@@ -1827,6 +1863,7 @@
       <model name="yellow_8">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>2.2169 2.9131 0.15 0 0 0</pose>
@@ -1875,6 +1912,7 @@
       <model name="yellow_9">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 0 0.15 0 0 0</pose>
@@ -1923,6 +1961,7 @@
       <model name="yellow_10">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>2.2169 -2.913 0.15 0 0 0</pose>
@@ -1971,6 +2010,7 @@
       <model name="yellow_11">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>3.8671 -5.382 0.15 0 0 0</pose>
@@ -2019,6 +2059,7 @@
       <model name="yellow_12">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>6.3368 -7.033 0.15 0 0 0</pose>
@@ -2067,6 +2108,7 @@
       <model name="yellow_13">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>9.25 -7.612 0.15 0 0 0</pose>
@@ -2115,6 +2157,7 @@
       <model name="yellow_14">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>12.163 -7.033 0.15 0 0 0</pose>
@@ -2163,6 +2206,7 @@
       <model name="yellow_15">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>14.632 -5.382 0.15 0 0 0</pose>
@@ -2211,6 +2255,7 @@
       <model name="yellow_16">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>16.283 -2.913 0.15 0 0 0</pose>
@@ -2259,6 +2304,7 @@
       <model name="yellow_17">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.745 7.5041 0.15 0 0 0</pose>
@@ -2307,6 +2353,7 @@
       <model name="yellow_18">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-5.188 9.8046 0.15 0 0 0</pose>
@@ -2355,6 +2402,7 @@
       <model name="yellow_19">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-9.25 10.612 0.15 0 0 0</pose>
@@ -2403,6 +2451,7 @@
       <model name="yellow_20">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-13.31 9.8046 0.15 0 0 0</pose>
@@ -2451,6 +2500,7 @@
       <model name="yellow_21">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-16.75 7.5041 0.15 0 0 0</pose>
@@ -2499,6 +2549,7 @@
       <model name="yellow_22">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-19.05 4.0612 0.15 0 0 0</pose>
@@ -2547,6 +2598,7 @@
       <model name="yellow_23">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-19.86 0 0.15 0 0 0</pose>
@@ -2595,6 +2647,7 @@
       <model name="yellow_24">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-19.05 -4.061 0.15 0 0 0</pose>
@@ -2643,6 +2696,7 @@
       <model name="yellow_25">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-16.75 -7.504 0.15 0 0 0</pose>
@@ -2691,6 +2745,7 @@
       <model name="yellow_26">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-13.31 -9.8 0.15 0 0 0</pose>
@@ -2739,6 +2794,7 @@
       <model name="yellow_27">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-9.25 -10.61 0.15 0 0 0</pose>
@@ -2787,6 +2843,7 @@
       <model name="yellow_28">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-5.188 -9.804 0.15 0 0 0</pose>
@@ -2835,6 +2892,7 @@
       <model name="yellow_29">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.745 -7.504 0.15 0 0 0</pose>
@@ -2886,6 +2944,7 @@
       <model name="orange_1">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 -9 0.15 0 0 0</pose>
@@ -2934,6 +2993,7 @@
       <model name="orange_2">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 -11 0.15 0 0 0</pose>
@@ -2982,6 +3042,7 @@
       <model name="orange_3">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 -9 0.15 0 0 0</pose>
@@ -3030,6 +3091,7 @@
       <model name="orange_4">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 -11 0.15 0 0 0</pose>
@@ -3078,6 +3140,7 @@
       <model name="orange_5">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 9 0.15 0 0 0</pose>
@@ -3126,6 +3189,7 @@
       <model name="orange_6">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 11 0.15 0 0 0</pose>
@@ -3174,6 +3238,7 @@
       <model name="orange_7">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 13 0.15 0 0 0</pose>
@@ -3222,6 +3287,7 @@
       <model name="orange_8">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 15 0.15 0 0 0</pose>
@@ -3270,6 +3336,7 @@
       <model name="orange_9">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 17 0.15 0 0 0</pose>
@@ -3318,6 +3385,7 @@
       <model name="orange_10">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 19 0.15 0 0 0</pose>
@@ -3366,6 +3434,7 @@
       <model name="orange_11">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 9 0.15 0 0 0</pose>
@@ -3414,6 +3483,7 @@
       <model name="orange_12">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 11 0.15 0 0 0</pose>
@@ -3462,6 +3532,7 @@
       <model name="orange_13">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 13 0.15 0 0 0</pose>
@@ -3510,6 +3581,7 @@
       <model name="orange_14">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 15 0.15 0 0 0</pose>
@@ -3558,6 +3630,7 @@
       <model name="orange_15">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 17 0.15 0 0 0</pose>
@@ -3606,6 +3679,7 @@
       <model name="orange_16">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 19 0.15 0 0 0</pose>
@@ -3654,6 +3728,7 @@
       <model name="orange_17">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.637 21 0.15 0 0 0</pose>
@@ -3702,6 +3777,7 @@
       <model name="orange_18">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.6375 21 0.15 0 0 0</pose>
@@ -3750,6 +3826,7 @@
       <model name="orange_19">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-0.55 21 0.15 0 0 0</pose>
@@ -3798,6 +3875,7 @@
       <model name="orange_20">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>0.55 21 0.15 0 0 0</pose>
@@ -3849,6 +3927,7 @@
       <model name="large_orange_1">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.783 1.4851 0.033 0 0 0</pose>
@@ -3899,6 +3978,7 @@
       <model name="large_orange_2">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>-1.783 -1.485 0.033 0 0 0</pose>
@@ -3949,6 +4029,7 @@
       <model name="large_orange_3">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.7837 1.4851 0.033 0 0 0</pose>
@@ -3999,6 +4080,7 @@
       <model name="large_orange_4">
         <static>true</static>
         <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+          <use_pose_vector_msg>true</use_pose_vector_msg>
           <publish_model_pose>true</publish_model_pose>
         </plugin>
         <pose>1.7837 -1.485 0.033 0 0 0</pose>
