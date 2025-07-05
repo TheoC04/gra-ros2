@@ -556,8 +556,9 @@
           <near>1.5</near>
           <far>35</far>
           <aspect_ratio>1.333333333333333</aspect_ratio>
-          <horizontal_fov>1.9198622000000001</horizontal_fov>
+          <horizontal_fov>1.22173</horizontal_fov>
         </logical_camera>
+        <gz_frame_id>camera_link_optical</gz_frame_id>
       </sensor>
     </link>
     <joint name='base_to_velodyne' type='fixed'>
