@@ -80,7 +80,7 @@ def generate_launch_description():
         ),
         SetLaunchConfiguration(
             name='world',
-            value='default'
+            value='map'
         ),
         SetLaunchConfiguration(
             name='map_file',
@@ -120,7 +120,7 @@ def generate_launch_description():
         ),
         SetLaunchConfiguration(
             name='world',
-            value='default'
+            value='map'
         ),
         SetLaunchConfiguration(
             name='map_file',
@@ -160,7 +160,7 @@ def generate_launch_description():
         ),
         SetLaunchConfiguration(
             name='world',
-            value='default'
+            value='map'
         ),
         SetLaunchConfiguration(
             name='map_file',
@@ -200,7 +200,7 @@ def generate_launch_description():
         ),
         SetLaunchConfiguration(
             name='world',
-            value='default'
+            value='map'
         ),
         SetLaunchConfiguration(
             name='map_file',
