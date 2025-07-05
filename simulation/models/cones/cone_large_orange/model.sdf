@@ -1,11 +1,11 @@
 <?xml version='1.0'?>
 <sdf version='1.4'>
-  <model name="cone_orange_big">
+  <model name="cone_large_orange">
     <link name="link">
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://ackermann_vehicle_gazebo/meshes/cone/cone_orange_big.dae</uri>
+            <uri>model://ackermann_vehicle_gazebo/meshes/cone/cone_large_orange.dae</uri>
      	      <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -13,7 +13,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://ackermann_vehicle_gazebo/meshes/cone/cone_orange_big.dae</uri>
+            <uri>model://ackermann_vehicle_gazebo/meshes/cone/cone_large_orange.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
