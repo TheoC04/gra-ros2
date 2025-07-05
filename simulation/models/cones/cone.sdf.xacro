@@ -17,7 +17,7 @@
                 </geometry>
             </visual>
             <collision name="collision">
-                <xacro:if value="${type == 'orange_big'}">
+                <xacro:if value="${type == 'large_orange'}">
                     <pose>0 0 0.232 0 0 0</pose>
                     <geometry>
                         <!-- Simpler collision model for performance boost -->
@@ -26,7 +26,7 @@
                         </box>
                     </geometry>
                 </xacro:if>
-                <xacro:unless value="${type == 'orange_big'}">
+                <xacro:unless value="${type == 'large_orange'}">
                     <geometry>
                         <!-- Simpler collision model for performance boost -->
                         <box>
@@ -51,7 +51,7 @@
 
             <!-- Different inertial properties for different types of cones -->
             <inertial>
-                <xacro:if value="${type == 'orange_big'}">
+                <xacro:if value="${type == 'large_orange'}">
                     <mass>1.05</mass>
                     <!-- Edit centre of mass later -->
                     <inertia>
@@ -63,7 +63,7 @@
                         <izz>0.002</izz>
                     </inertia>
                 </xacro:if>
-                <xacro:unless value="${type == 'orange_big'}">
+                <xacro:unless value="${type == 'large_orange'}">
                     <mass>0.45</mass>
                     <inertia>
                         <ixx>0.013</ixx>
