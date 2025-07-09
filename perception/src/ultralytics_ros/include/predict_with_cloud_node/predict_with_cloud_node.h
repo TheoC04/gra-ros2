@@ -93,6 +93,7 @@ private:
   int max_cluster_size_;
   bool gz_camera_convention_;
   float ransac_distance_threshold_;
+  float preprocessing_filter_threshold_;
 
 public:
   PredictWithCloudNode(const rclcpp::NodeOptions & options);
