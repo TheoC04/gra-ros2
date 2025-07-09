@@ -4,6 +4,7 @@ predict_with_cloud_node:
     yolo_3d_result_topic: "/yolo_3d_result"
 
     ransac_distance_threshold: 0.03
+    preprocessing_filter_threshold: 0.0
 
     # ZED2I PARAMS
     cluster_tolerance: 0.1

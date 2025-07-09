@@ -33,6 +33,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->declare_parameter<int>("min_cluster_size", 10);
   this->declare_parameter<int>("max_cluster_size", 700);
   this->declare_parameter<float>("ransac_distance_threshold", 0.03);
+  this->declare_parameter<float>("preprocessing_filter_threshold", 0.0);
   this->declare_parameter<bool>("gz_camera_convention", true);
 
   // Store parameters as private members
@@ -45,6 +46,7 @@ PredictWithCloudNode::PredictWithCloudNode(const rclcpp::NodeOptions & options)
   this->get_parameter("min_cluster_size", min_cluster_size_);
   this->get_parameter("max_cluster_size", max_cluster_size_);
   this->get_parameter("ransac_distance_threshold", ransac_distance_threshold_);
+  this->get_parameter("preprocessing_filter_threshold", preprocessing_filter_threshold_);
   this->get_parameter("gz_camera_convention", gz_camera_convention_);
 
   camera_info_sub_.subscribe(this, camera_info_topic_);
@@ -391,10 +393,10 @@ PredictWithCloudNode::downsampleCloudMsg(const sensor_msgs::msg::PointCloud2::Co
   pass.setInputCloud(cloud);
   if(gz_camera_convention_) {
     pass.setFilterFieldName ("z"); // ASSUMING WE ARE IN THE CAMERA (NOT OPTICAL) FRAME
-    pass.setFilterLimits (-999.99, 0.0);
+    pass.setFilterLimits (-999.99, preprocessing_filter_threshold_);
   } else {
     pass.setFilterFieldName ("z");
-    pass.setFilterLimits (-999.99, 0.0);
+    pass.setFilterLimits (-999.99, preprocessing_filter_threshold_);
   }
   pass.filter(*clipped_cloud);
   
