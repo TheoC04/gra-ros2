@@ -14,39 +14,26 @@ find_package(rosidl_default_generators REQUIRED)
 
 # Message files
 set(msg_files
-  "msg/VCU2AI.msg"
+    "msg/VCU2AI.msg"
 )
 
 # Message generation
 rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-  DEPENDENCIES std_msgs
+    ${msg_files}
+    DEPENDENCIES std_msgs
 )
-
-install(
-  DIRECTORY msg
-  DESTINATION share/${PROJECT_NAME}
-)
-
-# Export rosidl runtime dependencies
-ament_export_dependencies(rclcpp ackermann_msgs std_msgs rosidl_default_runtime)
-
-# Copy FS-AI_API C sources
-set(FS_AI_API_DIR "${CMAKE_CURRENT_SOURCE_DIR}/FS-AI_API")
-
-configure_file(${FS_AI_API_DIR}/FS-AI_API/fs-ai_api.c ${CMAKE_CURRENT_BINARY_DIR}/fs-ai_api.c COPYONLY)
-configure_file(${FS_AI_API_DIR}/FS-AI_API/can.c ${CMAKE_CURRENT_BINARY_DIR}/can.c COPYONLY)
-configure_file(${FS_AI_API_DIR}/FS-AI_API/fs-ai_api.h ${CMAKE_CURRENT_BINARY_DIR}/fs-ai_api.h COPYONLY)
-configure_file(${FS_AI_API_DIR}/FS-AI_API/can.h ${CMAKE_CURRENT_BINARY_DIR}/can.h COPYONLY)
 
 # Build FS-AI_API C library
 add_library(fs_ai_api STATIC
-  ${CMAKE_CURRENT_BINARY_DIR}/fs-ai_api.c
-  ${CMAKE_CURRENT_BINARY_DIR}/can.c
+    src/fs-ai_api.c
+    src/can.c
 )
-target_include_directories(fs_ai_api PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(fs_ai_api 
+    PUBLIC include
+    PRIVATE src include/fsai_api
+)
 
-# Add executables
+# Add ackermann_can executable
 add_executable(ackermann_can src/ackermann_can.cpp)
 ament_target_dependencies(ackermann_can rclcpp ackermann_msgs std_msgs)
 target_link_libraries(ackermann_can fs_ai_api)
@@ -55,23 +42,14 @@ target_link_libraries(ackermann_can fs_ai_api)
 rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
 target_link_libraries(ackermann_can ${cpp_typesupport_target})
 
-# Python script installation
-install(PROGRAMS
-  scripts/wheel_speed_controller.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-
-# Install launch files
-install(DIRECTORY launch
-  DESTINATION share/${PROJECT_NAME}
-)
-
 # Install targets
 install(TARGETS
-  fs_ai_api
-  ackermann_can
-  static_inspection_A
-  DESTINATION lib/${PROJECT_NAME}
+    fs_ai_api
+    ackermann_can
+    DESTINATION lib/${PROJECT_NAME}
 )
+
+# Export rosidl runtime dependencies
+ament_export_dependencies(rclcpp ackermann_msgs std_msgs rosidl_default_runtime)
 
 ament_package()

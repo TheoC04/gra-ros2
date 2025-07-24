@@ -8,7 +8,7 @@
 #include <fsai_api/msg/vcu2_ai.hpp>
 
 extern "C" {
-#include "fs-ai_api.h"
+#include "fsai_api/fs-ai_api.h"
 }
 
 // Constants
