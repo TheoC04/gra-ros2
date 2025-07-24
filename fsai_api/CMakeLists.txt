@@ -54,8 +54,6 @@ target_link_libraries(ackermann_can fs_ai_api)
 # Link generated message type support libraries
 rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
 target_link_libraries(ackermann_can ${cpp_typesupport_target})
-target_link_libraries(ai2vcu_node ${cpp_typesupport_target})
-target_link_libraries(static_inspection_A ${cpp_typesupport_target})
 
 # Python script installation
 install(PROGRAMS
