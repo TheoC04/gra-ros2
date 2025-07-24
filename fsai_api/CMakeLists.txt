@@ -51,10 +51,6 @@ add_executable(ackermann_can src/ackermann_can.cpp)
 ament_target_dependencies(ackermann_can rclcpp ackermann_msgs std_msgs)
 target_link_libraries(ackermann_can fs_ai_api)
 
-add_executable(ai2vcu_node src/ai2vcu_node.cpp)
-ament_target_dependencies(ai2vcu_node rclcpp ackermann_msgs std_msgs)
-target_link_libraries(ai2vcu_node fs_ai_api)
-
 # Link generated message type support libraries
 rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
 target_link_libraries(ackermann_can ${cpp_typesupport_target})
