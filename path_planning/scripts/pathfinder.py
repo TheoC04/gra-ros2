@@ -6,7 +6,7 @@ import numpy as np
 from geometry_msgs.msg import PoseStamped, Point, PointStamped
 from nav_msgs.msg import Path, Odometry
 from std_msgs.msg import Header, Bool
-from common_msgs.msg import ConeArray  # Adjust import if your package name differs
+from common_msgs.msg import ConeArray
 from tf2_geometry_msgs import do_transform_point
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
@@ -32,11 +32,10 @@ class TrackPathfinder(Node):
             self.get_logger().error(f"Invalid mission_type: '{event}'. Defaulting to 'acceleration'.")
             mission_type = MissionTypes.acceleration
         
-        self.path_planner = PathPlanner(mission_type) # acceleration, skidpad, autocross, trackdrive,
+        self.path_planner = PathPlanner(mission_type) # acceleration, skidpad, autocross, trackdrive
         self.path_pub = self.create_publisher(Path, '/path', 10)
         self.create_subscription(ConeArray, '/track_map', self.cone_callback, 10)
-        self.create_subscription(
-            Odometry, '/odom', self.odom_callback, 10)
+        self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
         
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -50,7 +49,7 @@ class TrackPathfinder(Node):
         self.latest_odom = msg
 
     def cone_callback(self, msg):
-        # Organize cones by type (order: yellow, blue, orange, large_orange)
+        # Organize cones by type (order: unknown, yellow, blue, orange, large_orange)
         # transform to odom frame if necessary
         # get map -> odom
         try:
@@ -68,7 +67,7 @@ class TrackPathfinder(Node):
                 for cone in cone_list:
                     point_stamped = PointStamped()
                     point_stamped.header.frame_id = "map"
-                    point_stamped.header.stamp = rclpy.time.Time()  # You can use msg.header.stamp if it's available and valid
+                    point_stamped.header.stamp = rclpy.time.Time()
                     point_stamped.point = cone.position
 
                     try:
@@ -92,7 +91,6 @@ class TrackPathfinder(Node):
         if all(c.shape[0] == 0 for c in global_cones):
             self.get_logger().warn("All cone arrays are empty, skipping path planning.")
             return
-
 
         # Use odometry if available, else default
         if self.latest_odom is not None:
