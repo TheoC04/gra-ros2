@@ -7,7 +7,11 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-
+find_package(velodyne REQUIRED)
+find_package(zed_wrapper REQUIRED)
+find_package(zed_components REQUIRED)
+find_package(zed_ros2 REQUIRED)
+find_package(zed_msgs REQUIRED)
 
 install(DIRECTORY
   launch
